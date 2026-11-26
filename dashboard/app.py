@@ -1,6 +1,7 @@
 """
 Streamlit Operational Dashboard for FloodGuard AI.
 Compliant with Blueprint Sections 6, 7, and 12.
+Supports all 38 Districts and 110+ Places across Tamil Nadu.
 """
 
 import os
@@ -12,7 +13,7 @@ import numpy as np
 
 # Set page configuration
 st.set_page_config(
-    page_title="FloodGuard AI • Urban Flood Intelligence",
+    page_title="FloodGuard AI • Tamil Nadu Flood Intelligence",
     page_icon="🌊",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -44,14 +45,32 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="main-header">FLOODGUARD AI</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-header">Urban Flood-Risk Estimation and Explainable Machine Learning Prototype (Chennai Basin)</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">FLOODGUARD AI • TAMIL NADU</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-header">Statewide Urban Flood-Risk Intelligence & Explainable AI Platform (38 Districts)</div>', unsafe_allow_html=True)
 
 # Blueprint safety disclaimer
 st.info("⚠️ **Safety Notice:** This is an educational AI prototype, not an official emergency warning service. Real-world safety decisions must follow official IMD and TN-SDMA disaster-management advisories.")
 
 # Sidebar Simulation Controls
 st.sidebar.header("🕹️ Simulation Parameters")
+
+# District Selection
+all_zones_dict = predictor.pipeline.zones_metadata
+# Extract districts
+districts_map = {}
+for z in all_zones_dict.values():
+    d_name = z.get("district_name", "Chennai")
+    if d_name not in districts_map:
+        districts_map[d_name] = []
+    districts_map[d_name].append(z)
+
+district_list = ["🌟 All Tamil Nadu (38 Districts)"] + sorted(list(districts_map.keys()))
+selected_district = st.sidebar.selectbox("Select District", district_list, index=0)
+
+if selected_district == "🌟 All Tamil Nadu (38 Districts)":
+    active_zones = list(all_zones_dict.values())
+else:
+    active_zones = districts_map.get(selected_district, [])
 
 preset = st.sidebar.selectbox(
     "Precipitation Scenario Preset",
@@ -74,17 +93,16 @@ rain_3d = st.sidebar.slider("3-Day Antecedent Total (mm)", float(rain_24h), 600.
 temp_c = st.sidebar.slider("Ambient Temperature (°C)", 15.0, 45.0, 26.5, 0.5)
 hum_pct = st.sidebar.slider("Relative Humidity (%)", 30.0, 100.0, 92.0, 1.0)
 
-# Batch evaluate all zones
-zones = predictor.pipeline.zones_metadata
-zone_options = [f"{z['area_id']} - {z['name']}" for z in zones.values()]
-selected_zone_str = st.sidebar.selectbox("Inspect Target Ward", zone_options)
+# Zone selector
+zone_options = [f"{z['area_id']} - {z['name']} ({z.get('district_name', 'Tamil Nadu')})" for z in active_zones]
+selected_zone_str = st.sidebar.selectbox("Inspect Target Place/Ward", zone_options)
 selected_zone_id = selected_zone_str.split(" - ")[0]
 
-# Compute predictions across all 12 zones
+# Compute predictions across active zones
 all_predictions = []
-for zid in zones.keys():
+for z in active_zones:
     req = {
-        "area_id": zid,
+        "area_id": z["area_id"],
         "rain_1h_mm": rain_1h,
         "rain_24h_mm": rain_24h,
         "rain_3d_mm": rain_3d,
@@ -102,16 +120,16 @@ mod_count = (df_preds["risk_band"] == "MODERATE").sum()
 low_count = (df_preds["risk_band"] == "LOW").sum()
 
 with c1:
-    st.metric("Total Monitored Wards", len(zones))
+    st.metric("Monitored Places", len(active_zones))
 with c2:
-    st.metric("🔴 High Inundation Risk", f"{high_count} Wards")
+    st.metric("🔴 High Inundation Risk", f"{high_count} Places")
 with c3:
-    st.metric("🟡 Moderate Watch", f"{mod_count} Wards")
+    st.metric("🟡 Moderate Watch", f"{mod_count} Places")
 with c4:
-    st.metric("🟢 Low / Normal Runoff", f"{low_count} Wards")
+    st.metric("🟢 Low / Normal Runoff", f"{low_count} Places")
 
 # Tabs for Blueprint screens
-tab_map, tab_detail, tab_metrics, tab_card = st.tabs(["🗺️ Regional Risk Map", "🔍 Ward SHAP Deep Dive", "📊 Evaluation Metrics", "📄 Model Card"])
+tab_map, tab_detail, tab_metrics, tab_card = st.tabs(["🗺️ Geospatial Risk Map", "🔍 Place SHAP Deep Dive", "📊 Evaluation Metrics", "📄 Model Card"])
 
 with tab_map:
     col_map, col_table = st.columns([3, 2])
@@ -120,11 +138,11 @@ with tab_map:
         # Prepare geospatial display points
         map_df = df_preds[["latitude", "longitude", "area_name", "risk_probability", "risk_band"]].copy()
         map_df["color"] = map_df["risk_band"].map({"HIGH": "#ef4444", "MODERATE": "#f59e0b", "LOW": "#10b981"})
-        st.subheader("Chennai Basin Threat Map")
+        st.subheader(f"Geospatial Threat Map: {selected_district}")
         st.map(map_df, latitude="latitude", longitude="longitude", size="risk_probability", color="color")
 
     with col_table:
-        st.subheader("Ward Summary Table")
+        st.subheader("Places Threat Summary")
         st.dataframe(
             df_preds[["area_id", "area_name", "risk_probability", "risk_band", "severity_description"]],
             use_container_width=True,
@@ -133,7 +151,7 @@ with tab_map:
 
 with tab_detail:
     current_pred = next(p for p in all_predictions if p["area_id"] == selected_zone_id)
-    z_info = zones[selected_zone_id]
+    z_info = all_zones_dict[selected_zone_id]
 
     col_h1, col_h2 = st.columns([2, 3])
     with col_h1:
@@ -145,10 +163,11 @@ with tab_detail:
         st.write(current_pred["severity_description"])
 
         st.markdown("#### Physical Attributes")
-        st.write(f"- **Elevation (MSL):** {z_info['elevation_m']} m")
-        st.write(f"- **Distance to Waterbody:** {z_info['distance_to_water_m']} m")
-        st.write(f"- **Impervious Concrete Surface:** {z_info['impervious_surface_pct']}%")
-        st.write(f"- **Drainage Capacity Index:** {z_info['drainage_capacity_index']}")
+        st.write(f"- **District:** {z_info.get('district_name', 'Tamil Nadu')}")
+        st.write(f"- **Elevation (MSL):** {z_info.get('elevation_m', 10.0)} m")
+        st.write(f"- **Distance to Waterbody:** {z_info.get('distance_to_water_m', z_info.get('dist_water_m', 500))} m")
+        st.write(f"- **Impervious Surface:** {z_info.get('impervious_surface_pct', 50)}%")
+        st.write(f"- **Drainage Capacity Index:** {z_info.get('drainage_capacity_index', 0.6)}")
 
     with col_h2:
         st.subheader("🧠 SHAP Feature Importance Breakdown")
@@ -170,8 +189,9 @@ with tab_card:
     st.subheader("Model Card: FloodGuard-AI v0.1.0")
     st.markdown("""
     - **Intended Use:** Scenario planning, civil defense preparation, and hydrological flood vulnerability modeling.
+    - **Coverage:** All 38 districts of Tamil Nadu (113 key urban and rural vulnerability nodes).
     - **Primary Estimator:** XGBoost Classifier with 160 estimators and class weight penalization (22.3x).
     - **Baseline Comparisons:** Random Forest, Logistic Regression, Dummy Prevalence.
-    - **Data Sources:** Chennai Metropolitan Area terrain elevation models, historical monsoon precipitation records, and validated SDMA flood event registers.
+    - **Data Sources:** Tamil Nadu Digital Elevation Models (DEM), historical monsoon precipitation records, and validated SDMA flood event registers.
     - **Limitations:** Does not account for localized structural blockages or sudden pump failures in real-time. Follow official advisories.
     """)
