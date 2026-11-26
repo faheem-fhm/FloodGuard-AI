@@ -1,0 +1,34 @@
+{
+  "RandomForest_Baseline": {
+    "pr_auc": 0.9714,
+    "roc_auc": 0.9993,
+    "precision": 0.9649,
+    "recall": 0.8462,
+    "f1_score": 0.9016,
+    "brier_score_calibration": 0.0029,
+    "operating_threshold": 0.8,
+    "confusion_matrix": {
+      "true_negatives": 3293,
+      "false_positives": 2,
+      "false_negatives": 10,
+      "true_positives": 55
+    },
+    "missed_cases_false_negatives": 10
+  },
+  "XGBoost_Production": {
+    "pr_auc": 0.973,
+    "roc_auc": 0.9994,
+    "precision": 0.9077,
+    "recall": 0.9077,
+    "f1_score": 0.9077,
+    "brier_score_calibration": 0.0036,
+    "operating_threshold": 0.75,
+    "confusion_matrix": {
+      "true_negatives": 3289,
+      "false_positives": 6,
+      "false_negatives": 6,
+      "true_positives": 59
+    },
+    "missed_cases_false_negatives": 6
+  }
+}

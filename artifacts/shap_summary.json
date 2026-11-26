@@ -1,0 +1,77 @@
+[
+  {
+    "feature": "rain_24h_mm",
+    "importance": 0.7448,
+    "description": "Accumulated 24-hour precipitation"
+  },
+  {
+    "feature": "runoff_index",
+    "importance": 0.1419,
+    "description": "Surface runoff potential (rainfall * impervious surface / drainage)"
+  },
+  {
+    "feature": "rain_3d_mm",
+    "importance": 0.0541,
+    "description": "3-day antecedent rainfall total"
+  },
+  {
+    "feature": "rain_1h_mm",
+    "importance": 0.0107,
+    "description": "Peak 1-hour cloudburst intensity"
+  },
+  {
+    "feature": "drainage_capacity_index",
+    "importance": 0.0089,
+    "description": "Stormwater drainage system infrastructure efficiency"
+  },
+  {
+    "feature": "slope_deg",
+    "importance": 0.0057,
+    "description": "Terrain slope inclination"
+  },
+  {
+    "feature": "antecedent_rain_ratio",
+    "importance": 0.0049,
+    "description": "Ratio of 24h burst to 3-day accumulated rainfall"
+  },
+  {
+    "feature": "flow_accumulation",
+    "importance": 0.0047,
+    "description": "Upstream catchment flow convergence"
+  },
+  {
+    "feature": "elevation_m",
+    "importance": 0.0045,
+    "description": "Digital Elevation Model height above mean sea level"
+  },
+  {
+    "feature": "temperature_c",
+    "importance": 0.004,
+    "description": "Ambient temperature"
+  },
+  {
+    "feature": "distance_to_water_m",
+    "importance": 0.0038,
+    "description": "Proximity to lakes, rivers, or canals"
+  },
+  {
+    "feature": "impervious_surface_pct",
+    "importance": 0.0036,
+    "description": "Urban concrete and asphalt coverage"
+  },
+  {
+    "feature": "humidity_pct",
+    "importance": 0.0036,
+    "description": "Atmospheric relative humidity"
+  },
+  {
+    "feature": "topographic_wetness_proxy",
+    "importance": 0.0034,
+    "description": "Terrain wetness index based on slope and catchment"
+  },
+  {
+    "feature": "depression_risk",
+    "importance": 0.0014,
+    "description": "Low-elevation topographic depression index"
+  }
+]

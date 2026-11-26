@@ -1,0 +1,17 @@
+[
+  "rain_1h_mm",
+  "rain_24h_mm",
+  "rain_3d_mm",
+  "temperature_c",
+  "humidity_pct",
+  "elevation_m",
+  "slope_deg",
+  "flow_accumulation",
+  "distance_to_water_m",
+  "impervious_surface_pct",
+  "drainage_capacity_index",
+  "runoff_index",
+  "topographic_wetness_proxy",
+  "depression_risk",
+  "antecedent_rain_ratio"
+]

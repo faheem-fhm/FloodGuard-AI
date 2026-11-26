@@ -1,0 +1,84 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'FloodGuard AI - Cloud Infrastructure (S3, DynamoDB, Lambda, API Gateway)'
+
+Parameters:
+  Environment:
+    Type: String
+    Default: 'production'
+    AllowedValues: ['development', 'staging', 'production']
+
+Resources:
+  # S3 Bucket for raw datasets and model artifacts
+  FloodGuardDataBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub 'floodguard-ai-${AWS::AccountId}-${Environment}'
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+
+  # DynamoDB Table for prediction audit trail
+  FloodGuardPredictionTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub 'FloodGuardPredictions-${Environment}'
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: area_id
+          AttributeType: S
+        - AttributeName: sort_key
+          AttributeType: S
+      KeySchema:
+        - AttributeName: area_id
+          KeyType: HASH
+        - AttributeName: sort_key
+          KeyType: RANGE
+
+  # IAM Role for Lambda
+  FloodGuardLambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: FloodGuardExecutionPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: 'arn:aws:logs:*:*:*'
+              - Effect: Allow
+                Action:
+                  - dynamodb:PutItem
+                  - dynamodb:GetItem
+                  - dynamodb:Query
+                Resource: !GetAtt FloodGuardPredictionTable.Arn
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                Resource: !Sub '${FloodGuardDataBucket.Arn}/*'
+
+Outputs:
+  BucketName:
+    Description: 'S3 Data Bucket'
+    Value: !Ref FloodGuardDataBucket
+  DynamoDBTableName:
+    Description: 'DynamoDB Prediction History Table'
+    Value: !Ref FloodGuardPredictionTable
