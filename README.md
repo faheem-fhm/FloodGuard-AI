@@ -1,10 +1,10 @@
-# 🌊 FloodGuard AI • Urban Flood Risk & Early Warning Intelligence
+#  FloodGuard AI • Urban Flood Risk & Early Warning Intelligence
 
 > **Production-grade Machine Learning system and modern interactive GIS intelligence platform for urban flood risk estimation, terrain hydrological modeling, and SHAP explainability.**
 
 ---
 
-## 📌 1. Overview & Problem Statement
+##  1. Overview & Problem Statement
 Urban flooding in coastal river deltas and metropolitan centers (such as the Chennai Basin during the 2015 extreme monsoon and 2023 Cyclone Michaung) presents an escalating hazard due to extreme cloudburst precipitation, low topography, concrete impervious surfaces, and restricted drainage outfalls.
 
 **FloodGuard AI** implements an end-to-end Machine Learning pipeline that ingests rainfall observations, Digital Elevation Models (DEM), hydrological flow accumulation, and urban drainage factors to:
@@ -15,7 +15,7 @@ Urban flooding in coastal river deltas and metropolitan centers (such as the Che
 
 ---
 
-## 🚀 2. System Architecture
+##  2. System Architecture
 
 ```
                   ┌──────────────────────────────────────────────┐
@@ -49,7 +49,7 @@ Urban flooding in coastal river deltas and metropolitan centers (such as the Che
 
 ---
 
-## ✨ 3. Key Features
+##  3. Key Features
 
 - **Interactive Leaflet GIS Command Center:** Full-screen CartoDB DarkMatter map with 12 Chennai wards (Velachery, Adyar, T. Nagar, Madipakkam, Tambaram, etc.), pulsating risk hotspots, and relief shelter toggles.
 - **Real-Time Hydrological Simulation Studio:** Live sliders for 24h accumulated rainfall (0–400mm), 1h cloudbursts, and 3-day history with instantaneous risk updates.
@@ -61,7 +61,7 @@ Urban flooding in coastal river deltas and metropolitan centers (such as the Che
 
 ---
 
-## 📊 4. Machine Learning Evaluation (Holdout Split)
+##  4. Machine Learning Evaluation (Holdout Split)
 
 Evaluated on an untouched chronological holdout of **3,360 ward-day observations** across the Chennai metropolitan area:
 
@@ -77,7 +77,7 @@ Evaluated on an untouched chronological holdout of **3,360 ward-day observations
 
 ---
 
-## 🛠️ 5. Quickstart & Local Execution
+##  5. Quickstart & Local Execution
 
 ### 1. Installation
 ```bash
@@ -113,7 +113,7 @@ streamlit run dashboard/app.py
 
 ---
 
-## 📡 6. API Specification (Blueprint Section 8)
+##  6. API Specification (Blueprint Section 8)
 
 ### `POST /v1/predict`
 **Request Payload:**
@@ -154,7 +154,7 @@ streamlit run dashboard/app.py
 
 ---
 
-## 🧪 7. Automated Testing
+##  7. Automated Testing
 Run the comprehensive unit test suite:
 ```bash
 python -m pytest tests -v
@@ -163,7 +163,7 @@ All 10 unit tests verify feature transformation, leakage quarantine, risk score 
 
 ---
 
-## ☁️ 8. AWS Cloud Architecture (Pattern B)
+##  8. AWS Cloud Architecture (Pattern B)
 - **Infrastructure as Code:** `infrastructure/cloudformation_template.yaml`
 - **Serverless Compute:** `infrastructure/lambda_handler.py`
 - **SageMaker Inference Container:** `infrastructure/sagemaker_inference.py`
@@ -171,5 +171,5 @@ All 10 unit tests verify feature transformation, leakage quarantine, risk score 
 
 ---
 
-## ⚠️ 9. Limitations & Responsible Use Disclaimer
+##  9. Limitations & Responsible Use Disclaimer
 **Safety Note:** FloodGuard AI is an educational prototype and decision-support demonstration tool. Predictions are mathematical estimates grounded in Digital Elevation Models (DEM) and meteorological observations. They cannot account for sudden debris jams or localized pump outages. **Real-world life safety directives, warnings, and evacuations must strictly adhere to official advisories issued by the India Meteorological Department (IMD) and Tamil Nadu State Disaster Management Authority (TN-SDMA).**
