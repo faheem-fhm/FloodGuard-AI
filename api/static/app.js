@@ -3495,7 +3495,7 @@ const INDIA_DATA = [
   }
 ];
 
-// Global helper for immediate close action from inline onclick or any caller
+// Global direct-call close function accessible anywhere from inline HTML
 window.closeInspectorPanel = function() {
   const ws = document.querySelector(".app-workspace");
   if (ws) ws.classList.add("inspector-hidden");
@@ -3533,7 +3533,7 @@ class FloodGuardApp {
     this.map = null;
     this.markers = {};
     this.polygons = {};
-    this.currentDistrictId = "ALL_INDIA";
+    this.currentState = "ALL_INDIA";
     this.currentAreaId = null;
     this.currentPredictions = {};
 
@@ -3547,20 +3547,20 @@ class FloodGuardApp {
 
   async init() {
     this.initMap();
-    this.populateDistrictDropdown();
+    this.populateStateDropdown();
     this.bindEvents();
     this.initModals();
 
     // Start with inspector panel closed
     this.closeInspector();
 
-    // Load Overall India
-    await this.onDistrictChanged("ALL_INDIA");
+    // Load Overall India initially
+    await this.onStateChanged("ALL_INDIA");
   }
 
   initMap() {
-    const mapContainerId = document.getElementById("gis-map") ? "gis-map" : "leaflet-map";
-    this.map = L.map(mapContainerId, {
+    const mapContainer = document.getElementById("gis-map") ? "gis-map" : "leaflet-map";
+    this.map = L.map(mapContainer, {
       center: [22.8, 79.5],
       zoom: 5,
       zoomControl: false,
@@ -3575,60 +3575,47 @@ class FloodGuardApp {
     }).addTo(this.map);
   }
 
-  populateDistrictDropdown() {
-    const distSelect = document.getElementById("select-district");
-    if (!distSelect) return;
+  populateStateDropdown() {
+    const stateSelect = document.getElementById("select-state") || document.getElementById("select-district");
+    if (!stateSelect) return;
 
-    distSelect.innerHTML = "";
+    stateSelect.innerHTML = "";
 
-    // 1. National
+    // 1. All India
     const optIndia = document.createElement("option");
     optIndia.value = "ALL_INDIA";
     optIndia.textContent = "🇮🇳 All India (National Grid)";
     optIndia.selected = true;
-    distSelect.appendChild(optIndia);
+    stateSelect.appendChild(optIndia);
 
-    // 2. Tamil Nadu Grid
+    // 2. Tamil Nadu
     const optTN = document.createElement("option");
-    optTN.value = "ALL_TN";
-    optTN.textContent = "🌟 Tamil Nadu (All 38 Districts Grid)";
-    distSelect.appendChild(optTN);
+    optTN.value = "Tamil Nadu";
+    optTN.textContent = "🌟 Tamil Nadu (All 38 Districts)";
+    stateSelect.appendChild(optTN);
 
-    // 3. All other Indian States & UTs
+    // 3. Collect unique Indian States from INDIA_DATA
     const statesMap = {};
     INDIA_DATA.forEach(d => {
-      if (d.state_name && d.state_name !== "Tamil Nadu") {
-        if (!statesMap[d.state_name]) {
-          statesMap[d.state_name] = [];
-        }
-        statesMap[d.state_name].push(d);
+      const st = d.state_name;
+      if (st && st !== "Tamil Nadu") {
+        if (!statesMap[st]) statesMap[st] = [];
+        statesMap[st].push(...d.areas);
       }
     });
 
-    const groupOtherStates = document.createElement("optgroup");
-    groupOtherStates.label = "── Indian States & Union Territories ──";
-    Object.keys(statesMap).sort().forEach(stName => {
+    const optGroup = document.createElement("optgroup");
+    optGroup.label = "── Indian States & Union Territories ──";
+    Object.keys(statesMap).sort().forEach(st => {
       const opt = document.createElement("option");
-      opt.value = `STATE_${stName}`;
-      const placeCount = statesMap[stName].reduce((acc, cur) => acc + cur.areas.length, 0);
-      opt.textContent = `🏛️ ${stName} (${placeCount} Places)`;
-      groupOtherStates.appendChild(opt);
+      opt.value = st;
+      opt.textContent = `🏛️ ${st} (${statesMap[st].length} Places)`;
+      optGroup.appendChild(opt);
     });
-    distSelect.appendChild(groupOtherStates);
+    stateSelect.appendChild(optGroup);
 
-    // 4. Tamil Nadu 38 Individual Districts
-    const groupTN = document.createElement("optgroup");
-    groupTN.label = "── Tamil Nadu Districts (38) ──";
-    INDIA_DATA.filter(d => d.state_code === "TN").forEach(d => {
-      const opt = document.createElement("option");
-      opt.value = d.district_id;
-      opt.textContent = `📍 ${d.district_name} (${d.areas.length} Places)`;
-      groupTN.appendChild(opt);
-    });
-    distSelect.appendChild(groupTN);
-
-    distSelect.addEventListener("change", (e) => {
-      this.onDistrictChanged(e.target.value);
+    stateSelect.addEventListener("change", (e) => {
+      this.onStateChanged(e.target.value);
     });
   }
 
@@ -3647,8 +3634,8 @@ class FloodGuardApp {
     areas.forEach(a => {
       const opt = document.createElement("option");
       opt.value = a.area_id;
-      const stTag = a.state_name ? ` [${a.state_name}]` : "";
-      opt.textContent = `🏢 ${a.name}${stTag} (${a.elevation_m}m MSL)`;
+      const distInfo = a.district_name ? ` (${a.district_name})` : "";
+      opt.textContent = `🏢 ${a.name}${distInfo} - ${a.elevation_m}m MSL`;
       areaSelect.appendChild(opt);
     });
 
@@ -3665,49 +3652,35 @@ class FloodGuardApp {
     window.openInspectorPanel(areaId);
   }
 
-  async onDistrictChanged(selectionKey) {
-    this.currentDistrictId = selectionKey;
+  async onStateChanged(stateKey) {
+    this.currentState = stateKey;
 
     let activeAreas = [];
     let groupTitle = "All Areas";
     let targetZoom = 11;
     let targetCenter = [13.04, 80.22];
 
-    if (selectionKey === "ALL_INDIA") {
+    if (stateKey === "ALL_INDIA") {
       INDIA_DATA.forEach(d => activeAreas.push(...d.areas));
       groupTitle = "All India National Hotspots";
       targetCenter = [22.8, 79.5];
       targetZoom = 5;
       this.closeInspector();
-    } else if (selectionKey === "ALL_TN") {
+    } else if (stateKey === "Tamil Nadu") {
       INDIA_DATA.filter(d => d.state_code === "TN").forEach(d => activeAreas.push(...d.areas));
       groupTitle = "All Tamil Nadu Places";
       targetCenter = [11.1271, 78.6569];
       targetZoom = 7;
       this.closeInspector();
-    } else if (selectionKey.startsWith("STATE_")) {
-      const stName = selectionKey.replace("STATE_", "");
-      const matched = INDIA_DATA.filter(d => d.state_name === stName);
+    } else {
+      const matched = INDIA_DATA.filter(d => d.state_name === stateKey);
       matched.forEach(d => activeAreas.push(...d.areas));
-      groupTitle = `All ${stName} Places`;
+      groupTitle = `All ${stateKey} Places`;
       if (matched.length > 0) {
         targetCenter = [matched[0].center_lat, matched[0].center_lng];
         targetZoom = matched[0].zoom ? Math.max(7, matched[0].zoom - 2) : 7;
       }
       this.closeInspector();
-    } else {
-      const district = INDIA_DATA.find(d => d.district_id === selectionKey);
-      if (district) {
-        activeAreas = district.areas;
-        groupTitle = `${district.district_name} Places`;
-        targetCenter = [district.center_lat, district.center_lng];
-        targetZoom = district.zoom || 11;
-      }
-      if (activeAreas.length > 0 && activeAreas.length <= 3) {
-        this.openInspector(activeAreas[0].area_id);
-      } else {
-        this.closeInspector();
-      }
     }
 
     this.map.flyTo(targetCenter, targetZoom, { duration: 0.9 });
@@ -3721,7 +3694,7 @@ class FloodGuardApp {
 
     // Render area markers
     activeAreas.forEach(a => {
-      const circleRadius = (selectionKey === "ALL_INDIA" || selectionKey === "ALL_TN") ? 3200 : 1400;
+      const circleRadius = (stateKey === "ALL_INDIA" || stateKey === "Tamil Nadu") ? 3200 : 1500;
       const circle = L.circle([a.latitude, a.longitude], {
         radius: circleRadius,
         color: "#ef4444",
@@ -3766,22 +3739,18 @@ class FloodGuardApp {
   }
 
   getActiveAreas() {
-    if (this.currentDistrictId === "ALL_INDIA") {
+    if (this.currentState === "ALL_INDIA") {
       const all = [];
       INDIA_DATA.forEach(d => all.push(...d.areas));
       return all;
-    } else if (this.currentDistrictId === "ALL_TN") {
+    } else if (this.currentState === "Tamil Nadu") {
       const all = [];
       INDIA_DATA.filter(d => d.state_code === "TN").forEach(d => all.push(...d.areas));
       return all;
-    } else if (this.currentDistrictId.startsWith("STATE_")) {
-      const stName = this.currentDistrictId.replace("STATE_", "");
-      const all = [];
-      INDIA_DATA.filter(d => d.state_name === stName).forEach(d => all.push(...d.areas));
-      return all;
     } else {
-      const d = INDIA_DATA.find(x => x.district_id === this.currentDistrictId);
-      return d ? d.areas : [];
+      const all = [];
+      INDIA_DATA.filter(d => d.state_name === this.currentState).forEach(d => all.push(...d.areas));
+      return all;
     }
   }
 
@@ -3860,29 +3829,14 @@ class FloodGuardApp {
     // Update Threat Overview Title
     const kpiHeader = document.getElementById("kpi-header-title");
     if (kpiHeader) {
-      let dName = "National";
-      if (this.currentDistrictId === "ALL_INDIA") dName = "India National";
-      else if (this.currentDistrictId === "ALL_TN") dName = "Tamil Nadu Statewide";
-      else if (this.currentDistrictId.startsWith("STATE_")) {
-        dName = this.currentDistrictId.replace("STATE_", "");
-      } else {
-        const matched = INDIA_DATA.find(d => d.district_id === this.currentDistrictId);
-        dName = matched ? matched.district_name : "Regional";
-      }
-      kpiHeader.textContent = `${dName} Threat Overview (${results.length} Nodes)`;
+      let stName = (this.currentState === "ALL_INDIA") ? "India National" : this.currentState;
+      kpiHeader.textContent = `${stName} Threat Overview (${results.length} Nodes)`;
     }
 
     // Update Banner Tag
     const bannerTag = document.getElementById("banner-region-tag");
     if (bannerTag) {
-      let bLabel = "India National Grid";
-      if (this.currentDistrictId === "ALL_TN") bLabel = "Tamil Nadu Grid";
-      else if (this.currentDistrictId.startsWith("STATE_")) {
-        bLabel = `${this.currentDistrictId.replace("STATE_", "")} State Grid`;
-      } else if (this.currentDistrictId !== "ALL_INDIA") {
-        const matched = INDIA_DATA.find(d => d.district_id === this.currentDistrictId);
-        bLabel = matched ? `${matched.district_name} Region` : "Regional Grid";
-      }
+      let bLabel = (this.currentState === "ALL_INDIA") ? "India National Grid" : `${this.currentState} Grid`;
       bannerTag.textContent = bLabel;
     }
 
@@ -4121,10 +4075,10 @@ class FloodGuardApp {
         for (const d of INDIA_DATA) {
           const found = d.areas.find(z => z.name.toLowerCase().includes(q) || z.area_id.toLowerCase().includes(q));
           if (found) {
-            const distSelect = document.getElementById("select-district");
-            if (distSelect && distSelect.value !== d.district_id) {
-              distSelect.value = d.district_id;
-              this.onDistrictChanged(d.district_id).then(() => {
+            const stateSelect = document.getElementById("select-state") || document.getElementById("select-district");
+            if (stateSelect && stateSelect.value !== d.state_name) {
+              stateSelect.value = d.state_name;
+              this.onStateChanged(d.state_name).then(() => {
                 this.selectZone(found.area_id);
               });
             } else {
@@ -4132,11 +4086,11 @@ class FloodGuardApp {
             }
             return;
           }
-          if (d.district_name.toLowerCase().includes(q)) {
-            const distSelect = document.getElementById("select-district");
-            if (distSelect && distSelect.value !== d.district_id) {
-              distSelect.value = d.district_id;
-              this.onDistrictChanged(d.district_id);
+          if (d.district_name.toLowerCase().includes(q) || d.state_name.toLowerCase().includes(q)) {
+            const stateSelect = document.getElementById("select-state") || document.getElementById("select-district");
+            if (stateSelect && stateSelect.value !== d.state_name) {
+              stateSelect.value = d.state_name;
+              this.onStateChanged(d.state_name);
               return;
             }
           }

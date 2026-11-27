@@ -106,21 +106,27 @@ STATIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 if os.path.exists(STATIC_DIR):
     app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
+    NO_CACHE_HEADERS = {
+        "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+        "Pragma": "no-cache",
+        "Expires": "0"
+    }
+
     @app.get("/style.css", include_in_schema=False)
     def serve_css():
         css_file = os.path.join(STATIC_DIR, "style.css")
-        return FileResponse(css_file, media_type="text/css")
+        return FileResponse(css_file, media_type="text/css", headers=NO_CACHE_HEADERS)
 
     @app.get("/app.js", include_in_schema=False)
     def serve_js():
         js_file = os.path.join(STATIC_DIR, "app.js")
-        return FileResponse(js_file, media_type="application/javascript")
+        return FileResponse(js_file, media_type="application/javascript", headers=NO_CACHE_HEADERS)
 
     @app.get("/", include_in_schema=False)
     def serve_index():
         index_file = os.path.join(STATIC_DIR, "index.html")
         if os.path.exists(index_file):
-            return FileResponse(index_file)
+            return FileResponse(index_file, headers=NO_CACHE_HEADERS)
         return {"message": "FloodGuard AI API is active. UI index.html not yet built."}
 
 if __name__ == "__main__":

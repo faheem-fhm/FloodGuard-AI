@@ -1614,3 +1614,85 @@ body.dark-theme {
   color: #ffffff !important;
   border-color: #ef4444 !important;
 }
+
+
+/* Explicit State and Area Selector Badges */
+.pill-prefix {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.14);
+  padding: 3px 7px;
+  border-radius: 6px;
+  margin-right: 6px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.district-selector-pill, .area-selector-pill {
+  display: flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  padding: 4px 12px;
+  backdrop-filter: blur(12px);
+}
+
+.modern-select {
+  background: transparent;
+  color: #f8fafc;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  max-width: 260px;
+}
+
+.modern-select option, .modern-select optgroup {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* Rock-solid Inspector Panel Removal */
+.app-workspace.inspector-hidden {
+  grid-template-columns: 360px 1fr 0px !important;
+}
+
+.app-workspace.inspector-hidden .right-inspector-panel,
+.app-workspace.inspector-hidden #inspector-panel {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  overflow: hidden !important;
+}
+
+.close-inspector-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #f8fafc;
+  font-size: 1.15rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.close-inspector-btn:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  border-color: #ef4444 !important;
+}
