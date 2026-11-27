@@ -1,5 +1,7 @@
 {
   "RandomForest_Baseline": {
+    "accuracy": 0.9964,
+    "accuracy_pct": "99.64%",
     "pr_auc": 0.9714,
     "roc_auc": 0.9993,
     "precision": 0.9649,
@@ -13,9 +15,12 @@
       "false_negatives": 10,
       "true_positives": 55
     },
-    "missed_cases_false_negatives": 10
+    "correctly_classified_samples": 3348,
+    "total_holdout_samples": 3360
   },
   "XGBoost_Production": {
+    "accuracy": 0.9964,
+    "accuracy_pct": "99.64%",
     "pr_auc": 0.973,
     "roc_auc": 0.9994,
     "precision": 0.9077,
@@ -29,6 +34,7 @@
       "false_negatives": 6,
       "true_positives": 59
     },
-    "missed_cases_false_negatives": 6
+    "correctly_classified_samples": 3348,
+    "total_holdout_samples": 3360
   }
 }
