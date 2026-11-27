@@ -3664,6 +3664,92 @@ class FloodGuardApp {
     });
   }
 
+  openDrilldownModal(targetBand) {
+    const areas = this.getActiveAreas();
+    const matching = [];
+
+    areas.forEach(a => {
+      const pred = this.currentPredictions[a.area_id] || this.simulateSingleClient(a);
+      if (pred.risk_band === targetBand) {
+        matching.push({ area: a, pred: pred });
+      }
+    });
+
+    const titleEl = document.getElementById("drilldown-modal-title");
+    const container = document.getElementById("drilldown-cities-list");
+    const searchInput = document.getElementById("input-drilldown-search");
+    if (searchInput) searchInput.value = "";
+
+    const bandLabels = {
+      "HIGH": { title: "🔴 High Inundation Areas", color: "#ef4444" },
+      "MODERATE": { title: "🟡 Moderate Watch Areas", color: "#f59e0b" },
+      "LOW": { title: "🟢 Low Risk Areas", color: "#10b981" }
+    };
+
+    const cfg = bandLabels[targetBand] || { title: `${targetBand} Areas`, color: "#38bdf8" };
+
+    if (titleEl) {
+      titleEl.innerHTML = `<i class="fa-solid fa-layer-group" style="color: ${cfg.color}; margin-right: 8px;"></i> <span>${cfg.title} (${matching.length} Cities / Places Active)</span>`;
+    }
+
+    const renderList = (filterText = "") => {
+      if (!container) return;
+      container.innerHTML = "";
+
+      const filtered = matching.filter(item => {
+        const q = filterText.toLowerCase();
+        return item.area.name.toLowerCase().includes(q) ||
+               (item.area.state_name && item.area.state_name.toLowerCase().includes(q)) ||
+               (item.area.district_name && item.area.district_name.toLowerCase().includes(q));
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div style="padding: 32px; text-align: center; color: #94a3b8; font-size: 0.9rem;">No matching cities or states found in this category.</div>`;
+        return;
+      }
+
+      filtered.forEach(item => {
+        const row = document.createElement("div");
+        row.className = "drilldown-row";
+        row.style.cssText = "display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 12px; cursor: pointer; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255,255,255,0.08);";
+
+        const probPct = Math.round(item.pred.risk_probability * 100);
+        const stName = item.area.state_name || "Tamil Nadu";
+        const dName = item.area.district_name ? ` • ${item.area.district_name}` : "";
+
+        row.innerHTML = `
+          <div style="display: flex; flex-direction: column; gap: 3px;">
+            <span style="font-weight: 700; color: #f8fafc; font-size: 0.95rem;">${item.area.name}</span>
+            <span style="font-size: 0.78rem; color: #94a3b8;">${stName}${dName} • Elevation: ${item.area.elevation_m}m • Catchment: ${item.area.water_body || 'Drainage Basin'}</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="padding: 4px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; background: ${item.pred.badge_color}22; color: ${item.pred.badge_color}; border: 1px solid ${item.pred.badge_color}55;">
+              ${probPct}% ${item.pred.risk_band}
+            </span>
+            <button type="button" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8; border-radius: 6px; padding: 6px 12px; font-size: 0.78rem; cursor: pointer; font-weight: 600;">
+              <i class="fa-solid fa-location-arrow"></i> View on Map
+            </button>
+          </div>
+        `;
+
+        row.onclick = () => {
+          window.closeModal("modal-threat-drilldown");
+          this.selectZone(item.area.area_id);
+        };
+
+        container.appendChild(row);
+      });
+    };
+
+    renderList();
+
+    if (searchInput) {
+      searchInput.oninput = (e) => renderList(e.target.value);
+    }
+
+    window.openModal("modal-threat-drilldown");
+  }
+
   closeInspector() {
     window.closeInspectorPanel();
   }

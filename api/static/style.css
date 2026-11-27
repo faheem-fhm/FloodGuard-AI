@@ -1713,3 +1713,41 @@ body.dark-theme {
 .modal-dialog {
   z-index: 10000 !important;
 }
+
+
+/* Interactive KPI Cards & Threat Drilldown */
+.kpi-card.clickable {
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative;
+  user-select: none;
+}
+
+.kpi-card.clickable:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.kpi-card.clickable:active {
+  transform: translateY(0);
+}
+
+.kpi-sub {
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  opacity: 0.78;
+  margin-top: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.drilldown-row {
+  transition: all 0.2s ease;
+}
+
+.drilldown-row:hover {
+  background: rgba(56, 189, 248, 0.12) !important;
+  border-color: rgba(56, 189, 248, 0.4) !important;
+  transform: translateX(4px);
+}

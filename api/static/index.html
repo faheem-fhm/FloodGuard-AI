@@ -1743,6 +1743,44 @@ body.dark-theme {
   z-index: 10000 !important;
 }
 
+
+/* Interactive KPI Cards & Threat Drilldown */
+.kpi-card.clickable {
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative;
+  user-select: none;
+}
+
+.kpi-card.clickable:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.kpi-card.clickable:active {
+  transform: translateY(0);
+}
+
+.kpi-sub {
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  opacity: 0.78;
+  margin-top: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.drilldown-row {
+  transition: all 0.2s ease;
+}
+
+.drilldown-row:hover {
+  background: rgba(56, 189, 248, 0.12) !important;
+  border-color: rgba(56, 189, 248, 0.4) !important;
+  transform: translateX(4px);
+}
+
 </style>
 </head>
 <body class="dark-theme">
@@ -2244,6 +2282,29 @@ body.dark-theme {
             </div>
             <span class="c-number">101</span>
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- MODAL: Threat Category Drilldown (Cities & States) -->
+  <div class="modal-backdrop" id="modal-threat-drilldown" onclick="if(event.target===this)window.closeModal('modal-threat-drilldown')">
+    <div class="modal-dialog glass-card" style="max-width: 760px; max-height: 85vh; padding: 24px;">
+      <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div class="modal-title" id="drilldown-modal-title" style="font-size: 1.15rem; font-weight: 800; display: flex; align-items: center;">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Threat Category Breakdown</span>
+        </div>
+        <button class="modal-close-btn" id="btn-close-drilldown" type="button" onclick="window.closeModal('modal-threat-drilldown')">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="drilldown-search-bar" style="margin-bottom: 16px;">
+          <input type="text" id="input-drilldown-search" placeholder="🔍 Search state, district, or city name in this list..." style="width: 100%; padding: 12px 16px; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255,255,255,0.16); border-radius: 10px; color: #f8fafc; font-size: 0.88rem; outline: none;">
+        </div>
+        <div id="drilldown-cities-list" class="drilldown-list-container" style="max-height: 55vh; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-right: 4px;">
+          <!-- Dynamically populated rows -->
         </div>
       </div>
     </div>
