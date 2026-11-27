@@ -84,9 +84,11 @@ class FloodService:
         return results
 
     def get_districts(self) -> List[Dict[str, Any]]:
+        india_path = os.path.join(BASE_DIR, "data", "raw", "india_states_data.json")
         tn_path = os.path.join(BASE_DIR, "data", "raw", "tamilnadu_districts.json")
-        if os.path.exists(tn_path):
-            with open(tn_path, "r", encoding="utf-8") as f:
+        target_path = india_path if os.path.exists(india_path) else tn_path
+        if os.path.exists(target_path):
+            with open(target_path, "r", encoding="utf-8") as f:
                 return json.load(f)
         return []
 

@@ -62,16 +62,19 @@ class FeaturePipeline:
                 zones_list = json.load(f)
                 self.zones_metadata = {z["area_id"]: z for z in zones_list}
 
-        # 2. Also load all 38 Tamil Nadu districts metadata
+        # 2. Load all India and Tamil Nadu geography metadata
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        india_path = os.path.join(base_dir, "data", "raw", "india_states_data.json")
         tn_path = os.path.join(base_dir, "data", "raw", "tamilnadu_districts.json")
-        if os.path.exists(tn_path):
-            with open(tn_path, "r", encoding="utf-8") as f:
+        target_path = india_path if os.path.exists(india_path) else tn_path
+        if os.path.exists(target_path):
+            with open(target_path, "r", encoding="utf-8") as f:
                 districts_data = json.load(f)
                 for dist in districts_data:
                     for a in dist.get("areas", []):
                         a["district_id"] = dist["district_id"]
                         a["district_name"] = dist["district_name"]
+                        a["state_name"] = dist.get("state_name", "Tamil Nadu")
                         self.zones_metadata[a["area_id"]] = a
 
     def prepare_training_data(self, csv_path: str) -> Tuple[pd.DataFrame, pd.Series, pd.DataFrame, pd.Series]:

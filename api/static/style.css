@@ -1554,3 +1554,12 @@ body.dark-theme {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* Responsive Inspector Panel Toggling */
+.app-workspace.inspector-hidden {
+  grid-template-columns: 360px 1fr !important;
+}
+
+.app-workspace.inspector-hidden .right-inspector-panel {
+  display: none !important;
+}
