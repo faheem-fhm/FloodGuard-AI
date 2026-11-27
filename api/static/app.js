@@ -1,11 +1,5 @@
 /**
  * FLOODGUARD AI - All-India & Tamil Nadu Urban Flood Intelligence Platform
- * Supports:
- * - 🇮🇳 Overall India National Monitoring Grid
- * - 🌟 Tamil Nadu (All 38 Districts, 113 Places)
- * - Major States: Kerala, Karnataka, Maharashtra, Delhi NCR, West Bengal, Assam, Telangana, Andhra, Odisha, Gujarat, UP, Bihar, Uttarakhand/HP, J&K.
- * - Interactive Leaflet GIS, SHAP Explainability, Real-time Cloudburst Simulation.
- * - Full inspector panel toggle (click 'x' or delete to close completely and expand map).
  */
 
 const INDIA_DATA = [
@@ -2500,136 +2494,330 @@ const INDIA_DATA = [
     "state_name": "Tamil Nadu"
   },
   {
-    "district_id": "KL-EKM",
-    "district_name": "Ernakulam (Kochi)",
-    "state_code": "KL",
-    "state_name": "Kerala",
-    "region_type": "Coastal Estuarine",
-    "center_lat": 9.9816,
-    "center_lng": 76.2999,
-    "zoom": 12,
+    "district_id": "AP-ALL",
+    "district_name": "Andhra Pradesh (Coastal & Delta)",
+    "state_code": "AP",
+    "state_name": "Andhra Pradesh",
+    "region_type": "Coastal & River Delta",
+    "center_lat": 16.5062,
+    "center_lng": 80.648,
+    "zoom": 7,
     "areas": [
       {
-        "area_id": "KL-001",
-        "name": "Kochi City (Marine Drive)",
-        "latitude": 9.9816,
-        "longitude": 76.2762,
-        "elevation_m": 2.5,
-        "slope_deg": 0.4,
+        "area_id": "AP-001",
+        "name": "Visakhapatnam (Gajuwaka Coastal Corridor)",
+        "latitude": 17.6912,
+        "longitude": 83.1856,
+        "elevation_m": 6.8,
+        "slope_deg": 1.2,
         "flow_acc": 1600.0,
-        "distance_to_water_m": 120.0,
+        "distance_to_water_m": 350.0,
+        "impervious_surface_pct": 79.0,
+        "drainage_capacity_index": 0.38,
+        "water_body": "Meghadrigedda Reservoir Runoff",
+        "base_flood_vulnerability": 0.85
+      },
+      {
+        "area_id": "AP-002",
+        "name": "Vijayawada (Budameru & Krishna Confluence)",
+        "latitude": 16.5385,
+        "longitude": 80.6415,
+        "elevation_m": 18.0,
+        "slope_deg": 0.5,
+        "flow_acc": 3300.0,
+        "distance_to_water_m": 50.0,
         "impervious_surface_pct": 82.0,
-        "drainage_capacity_index": 0.32,
-        "water_body": "Vembanad Lake & Backwaters",
+        "drainage_capacity_index": 0.28,
+        "water_body": "Budameru Rivulet & Krishna Spill",
+        "base_flood_vulnerability": 0.96
+      },
+      {
+        "area_id": "AP-003",
+        "name": "Nellore (Pennar River Floodplain)",
+        "latitude": 14.4426,
+        "longitude": 79.9865,
+        "elevation_m": 19.0,
+        "slope_deg": 0.7,
+        "flow_acc": 2100.0,
+        "distance_to_water_m": 120.0,
+        "impervious_surface_pct": 74.0,
+        "drainage_capacity_index": 0.35,
+        "water_body": "Pennar River Basin",
         "base_flood_vulnerability": 0.88
       },
       {
-        "area_id": "KL-002",
-        "name": "Aluva (Periyar Riverfront)",
-        "latitude": 10.1076,
-        "longitude": 76.3516,
-        "elevation_m": 8.0,
-        "slope_deg": 1.2,
-        "flow_acc": 3200.0,
-        "distance_to_water_m": 80.0,
-        "impervious_surface_pct": 65.0,
+        "area_id": "AP-004",
+        "name": "Tirupati (Swarnamukhi Basin Lowlands)",
+        "latitude": 13.6288,
+        "longitude": 79.4192,
+        "elevation_m": 150.0,
+        "slope_deg": 2.1,
+        "flow_acc": 1400.0,
+        "distance_to_water_m": 280.0,
+        "impervious_surface_pct": 76.0,
         "drainage_capacity_index": 0.4,
-        "water_body": "Periyar River",
-        "base_flood_vulnerability": 0.92
+        "water_body": "Swarnamukhi River",
+        "base_flood_vulnerability": 0.82
       }
     ]
   },
   {
-    "district_id": "KL-ALP",
-    "district_name": "Alappuzha (Kuttanad)",
-    "state_code": "KL",
-    "state_name": "Kerala",
-    "region_type": "Below Sea-Level Delta",
-    "center_lat": 9.4981,
-    "center_lng": 76.3388,
-    "zoom": 11,
+    "district_id": "AS-ALL",
+    "district_name": "Assam (Brahmaputra & Barak Valley)",
+    "state_code": "AS",
+    "state_name": "Assam",
+    "region_type": "Major River Floodplain",
+    "center_lat": 26.1445,
+    "center_lng": 91.7362,
+    "zoom": 7,
     "areas": [
       {
-        "area_id": "KL-003",
-        "name": "Kuttanad Delta (Below MSL)",
-        "latitude": 9.4233,
-        "longitude": 76.4533,
-        "elevation_m": -1.5,
-        "slope_deg": 0.2,
+        "area_id": "AS-001",
+        "name": "Guwahati (Bharalu & Anil Nagar Lowlands)",
+        "latitude": 26.172,
+        "longitude": 91.764,
+        "elevation_m": 51.0,
+        "slope_deg": 0.5,
         "flow_acc": 2800.0,
-        "distance_to_water_m": 40.0,
-        "impervious_surface_pct": 45.0,
+        "distance_to_water_m": 60.0,
+        "impervious_surface_pct": 86.0,
         "drainage_capacity_index": 0.25,
-        "water_body": "Pamba & Vembanad System",
+        "water_body": "Bharalu River Channel",
         "base_flood_vulnerability": 0.96
+      },
+      {
+        "area_id": "AS-002",
+        "name": "Dibrugarh (Town Protection Dyke & Mohanaghat)",
+        "latitude": 27.485,
+        "longitude": 94.908,
+        "elevation_m": 105.0,
+        "slope_deg": 0.3,
+        "flow_acc": 4200.0,
+        "distance_to_water_m": 70.0,
+        "impervious_surface_pct": 68.0,
+        "drainage_capacity_index": 0.35,
+        "water_body": "Brahmaputra Mainstem",
+        "base_flood_vulnerability": 0.94
+      },
+      {
+        "area_id": "AS-003",
+        "name": "Silchar (Barak Valley Riverfront)",
+        "latitude": 24.8333,
+        "longitude": 92.7789,
+        "elevation_m": 22.0,
+        "slope_deg": 0.4,
+        "flow_acc": 3400.0,
+        "distance_to_water_m": 50.0,
+        "impervious_surface_pct": 72.0,
+        "drainage_capacity_index": 0.26,
+        "water_body": "Barak River Dykes",
+        "base_flood_vulnerability": 0.95
+      },
+      {
+        "area_id": "AS-004",
+        "name": "Kaziranga (Brahmaputra Overflow Corridor)",
+        "latitude": 26.5775,
+        "longitude": 93.1711,
+        "elevation_m": 65.0,
+        "slope_deg": 0.2,
+        "flow_acc": 3900.0,
+        "distance_to_water_m": 40.0,
+        "impervious_surface_pct": 18.0,
+        "drainage_capacity_index": 0.45,
+        "water_body": "Brahmaputra Wetlands",
+        "base_flood_vulnerability": 0.97
       }
     ]
   },
   {
-    "district_id": "KL-WYD",
-    "district_name": "Wayanad (Meppadi)",
-    "state_code": "KL",
-    "state_name": "Kerala",
-    "region_type": "Western Ghats Highland",
-    "center_lat": 11.6854,
-    "center_lng": 76.132,
+    "district_id": "BR-ALL",
+    "district_name": "Bihar (Ganga & Kosi Basins)",
+    "state_code": "BR",
+    "state_name": "Bihar",
+    "region_type": "Gangetic Basin Lowlands",
+    "center_lat": 25.5941,
+    "center_lng": 85.1376,
+    "zoom": 7,
+    "areas": [
+      {
+        "area_id": "BR-001",
+        "name": "Patna (Kankarbagh & Rajendra Nagar Confluence)",
+        "latitude": 25.5912,
+        "longitude": 85.1584,
+        "elevation_m": 51.5,
+        "slope_deg": 0.3,
+        "flow_acc": 3400.0,
+        "distance_to_water_m": 150.0,
+        "impervious_surface_pct": 88.0,
+        "drainage_capacity_index": 0.24,
+        "water_body": "Punpun & Ganga Backflow",
+        "base_flood_vulnerability": 0.95
+      },
+      {
+        "area_id": "BR-002",
+        "name": "Muzaffarpur (Burhi Gandak Embankment)",
+        "latitude": 26.1209,
+        "longitude": 85.3647,
+        "elevation_m": 56.0,
+        "slope_deg": 0.4,
+        "flow_acc": 2900.0,
+        "distance_to_water_m": 110.0,
+        "impervious_surface_pct": 75.0,
+        "drainage_capacity_index": 0.28,
+        "water_body": "Burhi Gandak River",
+        "base_flood_vulnerability": 0.92
+      },
+      {
+        "area_id": "BR-003",
+        "name": "Bhagalpur (Ganga Floodplain Urban Fringe)",
+        "latitude": 25.2425,
+        "longitude": 86.9842,
+        "elevation_m": 52.0,
+        "slope_deg": 0.5,
+        "flow_acc": 3600.0,
+        "distance_to_water_m": 80.0,
+        "impervious_surface_pct": 78.0,
+        "drainage_capacity_index": 0.3,
+        "water_body": "Ganga River Channel",
+        "base_flood_vulnerability": 0.91
+      }
+    ]
+  },
+  {
+    "district_id": "DL-ALL",
+    "district_name": "Delhi NCR (Yamuna Basin)",
+    "state_code": "DL",
+    "state_name": "Delhi NCR",
+    "region_type": "Urban Riverine Floodplain",
+    "center_lat": 28.6139,
+    "center_lng": 77.209,
     "zoom": 11,
     "areas": [
       {
-        "area_id": "KL-004",
-        "name": "Meppadi & Chooralmala Valley",
-        "latitude": 11.5516,
-        "longitude": 76.1283,
-        "elevation_m": 780.0,
-        "slope_deg": 18.5,
+        "area_id": "DL-001",
+        "name": "Yamuna Bazar & Kashmere Gate Lowlands",
+        "latitude": 28.6653,
+        "longitude": 77.2324,
+        "elevation_m": 204.0,
+        "slope_deg": 0.4,
+        "flow_acc": 3600.0,
+        "distance_to_water_m": 80.0,
+        "impervious_surface_pct": 89.0,
+        "drainage_capacity_index": 0.3,
+        "water_body": "Yamuna River Floodplain",
+        "base_flood_vulnerability": 0.95
+      },
+      {
+        "area_id": "DL-002",
+        "name": "Minto Bridge & Connaught Place Underpass",
+        "latitude": 28.634,
+        "longitude": 77.225,
+        "elevation_m": 210.0,
+        "slope_deg": 0.6,
+        "flow_acc": 1200.0,
+        "distance_to_water_m": 600.0,
+        "impervious_surface_pct": 95.0,
+        "drainage_capacity_index": 0.26,
+        "water_body": "Barapullah SWD Drainage System",
+        "base_flood_vulnerability": 0.88
+      },
+      {
+        "area_id": "DL-003",
+        "name": "Mayur Vihar & ITO Ring Road Low Corridor",
+        "latitude": 28.6044,
+        "longitude": 77.2954,
+        "elevation_m": 205.5,
+        "slope_deg": 0.5,
         "flow_acc": 2200.0,
-        "distance_to_water_m": 150.0,
-        "impervious_surface_pct": 35.0,
-        "drainage_capacity_index": 0.45,
-        "water_body": "Iruvanjippuzha Tributary",
-        "base_flood_vulnerability": 0.89
+        "distance_to_water_m": 210.0,
+        "impervious_surface_pct": 86.0,
+        "drainage_capacity_index": 0.32,
+        "water_body": "Yamuna East Bank Bundh",
+        "base_flood_vulnerability": 0.91
+      },
+      {
+        "area_id": "DL-004",
+        "name": "Gurugram (Cyber City & Subhash Chowk)",
+        "latitude": 28.4986,
+        "longitude": 77.0878,
+        "elevation_m": 218.0,
+        "slope_deg": 0.8,
+        "flow_acc": 1500.0,
+        "distance_to_water_m": 450.0,
+        "impervious_surface_pct": 92.0,
+        "drainage_capacity_index": 0.29,
+        "water_body": "Najafgarh Drain Outfall",
+        "base_flood_vulnerability": 0.87
       }
     ]
   },
   {
-    "district_id": "KL-TVM",
-    "district_name": "Thiruvananthapuram",
-    "state_code": "KL",
-    "state_name": "Kerala",
-    "region_type": "Coastal Urban",
-    "center_lat": 8.5241,
-    "center_lng": 76.9366,
-    "zoom": 12,
+    "district_id": "GJ-ALL",
+    "district_name": "Gujarat (Sabarmati & Tapi Estuary)",
+    "state_code": "GJ",
+    "state_name": "Gujarat",
+    "region_type": "Coastal & Estuarine Basin",
+    "center_lat": 22.2587,
+    "center_lng": 71.1924,
+    "zoom": 7,
     "areas": [
       {
-        "area_id": "KL-005",
-        "name": "Thampanoor & Thekkumoodu",
-        "latitude": 8.4875,
-        "longitude": 76.9525,
-        "elevation_m": 6.0,
-        "slope_deg": 0.9,
-        "flow_acc": 1100.0,
-        "distance_to_water_m": 210.0,
-        "impervious_surface_pct": 84.0,
-        "drainage_capacity_index": 0.35,
-        "water_body": "Amayizhanjan Canal",
-        "base_flood_vulnerability": 0.84
+        "area_id": "GJ-001",
+        "name": "Ahmedabad (Sabarmati Riverfront Corridor)",
+        "latitude": 23.0482,
+        "longitude": 72.5721,
+        "elevation_m": 48.0,
+        "slope_deg": 0.6,
+        "flow_acc": 2200.0,
+        "distance_to_water_m": 90.0,
+        "impervious_surface_pct": 88.0,
+        "drainage_capacity_index": 0.36,
+        "water_body": "Sabarmati River Channel",
+        "base_flood_vulnerability": 0.86
+      },
+      {
+        "area_id": "GJ-002",
+        "name": "Surat (Adajan & Rander Tapi Estuary)",
+        "latitude": 21.1985,
+        "longitude": 72.7952,
+        "elevation_m": 12.0,
+        "slope_deg": 0.3,
+        "flow_acc": 3600.0,
+        "distance_to_water_m": 110.0,
+        "impervious_surface_pct": 85.0,
+        "drainage_capacity_index": 0.3,
+        "water_body": "Tapi River Mouth & Tidal Surge",
+        "base_flood_vulnerability": 0.94
+      },
+      {
+        "area_id": "GJ-003",
+        "name": "Vadodara (Vishwamitri River Lowlands)",
+        "latitude": 22.3072,
+        "longitude": 73.1812,
+        "elevation_m": 35.0,
+        "slope_deg": 0.5,
+        "flow_acc": 2400.0,
+        "distance_to_water_m": 80.0,
+        "impervious_surface_pct": 83.0,
+        "drainage_capacity_index": 0.32,
+        "water_body": "Vishwamitri River Channel",
+        "base_flood_vulnerability": 0.9
       }
     ]
   },
   {
-    "district_id": "KA-BLR",
-    "district_name": "Bengaluru Urban",
+    "district_id": "KA-ALL",
+    "district_name": "Karnataka (Bengaluru & Coastal)",
     "state_code": "KA",
     "state_name": "Karnataka",
-    "region_type": "Plateau Urban Valley",
-    "center_lat": 12.9716,
-    "center_lng": 77.5946,
-    "zoom": 12,
+    "region_type": "Plateau Valleys & Coastal Ports",
+    "center_lat": 13.5,
+    "center_lng": 75.8,
+    "zoom": 7,
     "areas": [
       {
         "area_id": "KA-001",
-        "name": "Bellandur & Rainbow Drive",
+        "name": "Bengaluru (Bellandur & Rainbow Drive Valley)",
         "latitude": 12.926,
         "longitude": 77.6762,
         "elevation_m": 880.0,
@@ -2643,7 +2831,7 @@ const INDIA_DATA = [
       },
       {
         "area_id": "KA-002",
-        "name": "Koramangala 4th Block",
+        "name": "Bengaluru (Koramangala 4th Block Drain)",
         "latitude": 12.9344,
         "longitude": 77.6258,
         "elevation_m": 892.0,
@@ -2657,33 +2845,7 @@ const INDIA_DATA = [
       },
       {
         "area_id": "KA-003",
-        "name": "Mahadevapura & Manyata Tech",
-        "latitude": 12.9912,
-        "longitude": 77.6974,
-        "elevation_m": 875.0,
-        "slope_deg": 0.7,
-        "flow_acc": 1800.0,
-        "distance_to_water_m": 250.0,
-        "impervious_surface_pct": 85.0,
-        "drainage_capacity_index": 0.34,
-        "water_body": "Dakshina Pinakini Basin",
-        "base_flood_vulnerability": 0.87
-      }
-    ]
-  },
-  {
-    "district_id": "KA-DKN",
-    "district_name": "Dakshina Kannada (Mangaluru)",
-    "state_code": "KA",
-    "state_name": "Karnataka",
-    "region_type": "Coastal River Confluence",
-    "center_lat": 12.9141,
-    "center_lng": 74.856,
-    "zoom": 12,
-    "areas": [
-      {
-        "area_id": "KA-004",
-        "name": "Kodialbail & Pumpwell",
+        "name": "Mangaluru (Pumpwell & Netravati Confluence)",
         "latitude": 12.8732,
         "longitude": 74.8624,
         "elevation_m": 8.5,
@@ -2694,22 +2856,10 @@ const INDIA_DATA = [
         "drainage_capacity_index": 0.42,
         "water_body": "Netravati River Confluence",
         "base_flood_vulnerability": 0.82
-      }
-    ]
-  },
-  {
-    "district_id": "KA-KOD",
-    "district_name": "Kodagu (Madikeri)",
-    "state_code": "KA",
-    "state_name": "Karnataka",
-    "region_type": "Western Ghats Catchment",
-    "center_lat": 12.4244,
-    "center_lng": 75.7382,
-    "zoom": 11,
-    "areas": [
+      },
       {
-        "area_id": "KA-005",
-        "name": "Bhagamandala Triveni Sangam",
+        "area_id": "KA-004",
+        "name": "Kodagu (Bhagamandala Triveni Sangam)",
         "latitude": 12.3892,
         "longitude": 75.5312,
         "elevation_m": 870.0,
@@ -2724,18 +2874,100 @@ const INDIA_DATA = [
     ]
   },
   {
-    "district_id": "MH-MUM",
-    "district_name": "Mumbai Metropolitan",
+    "district_id": "KL-ALL",
+    "district_name": "Kerala (Coastal, Backwaters & Ghats)",
+    "state_code": "KL",
+    "state_name": "Kerala",
+    "region_type": "Coastal Estuaries & Hill Slopes",
+    "center_lat": 10.5,
+    "center_lng": 76.2,
+    "zoom": 7,
+    "areas": [
+      {
+        "area_id": "KL-001",
+        "name": "Kochi (Marine Drive & Edappally Lowlands)",
+        "latitude": 9.9816,
+        "longitude": 76.2762,
+        "elevation_m": 2.5,
+        "slope_deg": 0.4,
+        "flow_acc": 1600.0,
+        "distance_to_water_m": 120.0,
+        "impervious_surface_pct": 82.0,
+        "drainage_capacity_index": 0.32,
+        "water_body": "Vembanad Lake & Backwaters",
+        "base_flood_vulnerability": 0.88
+      },
+      {
+        "area_id": "KL-002",
+        "name": "Aluva (Periyar Riverfront Spills)",
+        "latitude": 10.1076,
+        "longitude": 76.3516,
+        "elevation_m": 8.0,
+        "slope_deg": 1.2,
+        "flow_acc": 3200.0,
+        "distance_to_water_m": 80.0,
+        "impervious_surface_pct": 65.0,
+        "drainage_capacity_index": 0.4,
+        "water_body": "Periyar River",
+        "base_flood_vulnerability": 0.92
+      },
+      {
+        "area_id": "KL-003",
+        "name": "Alappuzha (Kuttanad Sub-Sea-Level Delta)",
+        "latitude": 9.4233,
+        "longitude": 76.4533,
+        "elevation_m": -1.5,
+        "slope_deg": 0.2,
+        "flow_acc": 2800.0,
+        "distance_to_water_m": 40.0,
+        "impervious_surface_pct": 45.0,
+        "drainage_capacity_index": 0.25,
+        "water_body": "Pamba & Vembanad System",
+        "base_flood_vulnerability": 0.96
+      },
+      {
+        "area_id": "KL-004",
+        "name": "Wayanad (Meppadi & Chooralmala Valley)",
+        "latitude": 11.5516,
+        "longitude": 76.1283,
+        "elevation_m": 780.0,
+        "slope_deg": 18.5,
+        "flow_acc": 2200.0,
+        "distance_to_water_m": 150.0,
+        "impervious_surface_pct": 35.0,
+        "drainage_capacity_index": 0.45,
+        "water_body": "Iruvanjippuzha Tributary",
+        "base_flood_vulnerability": 0.89
+      },
+      {
+        "area_id": "KL-005",
+        "name": "Thiruvananthapuram (Thampanoor Canal Basin)",
+        "latitude": 8.4875,
+        "longitude": 76.9525,
+        "elevation_m": 6.0,
+        "slope_deg": 0.9,
+        "flow_acc": 1100.0,
+        "distance_to_water_m": 210.0,
+        "impervious_surface_pct": 84.0,
+        "drainage_capacity_index": 0.35,
+        "water_body": "Amayizhanjan Canal",
+        "base_flood_vulnerability": 0.84
+      }
+    ]
+  },
+  {
+    "district_id": "MH-ALL",
+    "district_name": "Maharashtra (Mumbai, Pune & River Basins)",
     "state_code": "MH",
     "state_name": "Maharashtra",
-    "region_type": "Coastal Megacity & Mithi Estuary",
-    "center_lat": 19.076,
-    "center_lng": 72.8777,
-    "zoom": 12,
+    "region_type": "Coastal Megacity & Plateau Rivers",
+    "center_lat": 19.0,
+    "center_lng": 74.0,
+    "zoom": 7,
     "areas": [
       {
         "area_id": "MH-001",
-        "name": "Kurla & Kranti Nagar (Mithi)",
+        "name": "Mumbai (Kurla & Kranti Nagar Mithi Basin)",
         "latitude": 19.0726,
         "longitude": 72.8845,
         "elevation_m": 4.0,
@@ -2749,7 +2981,7 @@ const INDIA_DATA = [
       },
       {
         "area_id": "MH-002",
-        "name": "Hindmata & Dadar TT Circle",
+        "name": "Mumbai (Hindmata & Dadar Low-Lying Bowl)",
         "latitude": 19.0178,
         "longitude": 72.8478,
         "elevation_m": 3.2,
@@ -2763,7 +2995,7 @@ const INDIA_DATA = [
       },
       {
         "area_id": "MH-003",
-        "name": "Milan Subway & Andheri West",
+        "name": "Mumbai (Milan Subway & Andheri West)",
         "latitude": 19.1197,
         "longitude": 72.8464,
         "elevation_m": 5.0,
@@ -2774,22 +3006,10 @@ const INDIA_DATA = [
         "drainage_capacity_index": 0.28,
         "water_body": "Oshiwara River Channel",
         "base_flood_vulnerability": 0.9
-      }
-    ]
-  },
-  {
-    "district_id": "MH-PUN",
-    "district_name": "Pune",
-    "state_code": "MH",
-    "state_name": "Maharashtra",
-    "region_type": "River Confluence Urban",
-    "center_lat": 18.5204,
-    "center_lng": 73.8567,
-    "zoom": 12,
-    "areas": [
+      },
       {
         "area_id": "MH-004",
-        "name": "Sinhagad Road & Ekta Nagari",
+        "name": "Pune (Sinhagad Road & Mutha River Bank)",
         "latitude": 18.4735,
         "longitude": 73.8242,
         "elevation_m": 558.0,
@@ -2800,22 +3020,10 @@ const INDIA_DATA = [
         "drainage_capacity_index": 0.38,
         "water_body": "Mutha River Discharge",
         "base_flood_vulnerability": 0.89
-      }
-    ]
-  },
-  {
-    "district_id": "MH-KOP",
-    "district_name": "Kolhapur",
-    "state_code": "MH",
-    "state_name": "Maharashtra",
-    "region_type": "River Basin Lowland",
-    "center_lat": 16.705,
-    "center_lng": 74.2433,
-    "zoom": 12,
-    "areas": [
+      },
       {
         "area_id": "MH-005",
-        "name": "Panchganga Ghat & Rajaram Weir",
+        "name": "Kolhapur (Panchganga Ghat & Rajaram Weir)",
         "latitude": 16.7112,
         "longitude": 74.2388,
         "elevation_m": 545.0,
@@ -2830,204 +3038,152 @@ const INDIA_DATA = [
     ]
   },
   {
-    "district_id": "DL-NCR",
-    "district_name": "Delhi National Capital Region",
-    "state_code": "DL",
-    "state_name": "Delhi NCR",
-    "region_type": "Riverine Floodplain Urban",
-    "center_lat": 28.6139,
-    "center_lng": 77.209,
-    "zoom": 12,
+    "district_id": "OD-ALL",
+    "district_name": "Odisha (Mahanadi Delta & Coastal)",
+    "state_code": "OD",
+    "state_name": "Odisha",
+    "region_type": "Deltaic & Coastal Storm Surge",
+    "center_lat": 20.3,
+    "center_lng": 85.8,
+    "zoom": 7,
     "areas": [
       {
-        "area_id": "DL-001",
-        "name": "Yamuna Bazar & Kashmere Gate",
-        "latitude": 28.6653,
-        "longitude": 77.2324,
-        "elevation_m": 204.0,
+        "area_id": "OD-001",
+        "name": "Bhubaneswar (Jayadev Vihar & Gangua Nala)",
+        "latitude": 20.3025,
+        "longitude": 85.8285,
+        "elevation_m": 38.0,
+        "slope_deg": 0.8,
+        "flow_acc": 1700.0,
+        "distance_to_water_m": 220.0,
+        "impervious_surface_pct": 81.0,
+        "drainage_capacity_index": 0.35,
+        "water_body": "Gangua Nala Discharge",
+        "base_flood_vulnerability": 0.87
+      },
+      {
+        "area_id": "OD-002",
+        "name": "Cuttack (Mahanadi & Kathajodi Ring Road)",
+        "latitude": 20.4625,
+        "longitude": 85.8828,
+        "elevation_m": 28.0,
         "slope_deg": 0.4,
-        "flow_acc": 3600.0,
-        "distance_to_water_m": 80.0,
-        "impervious_surface_pct": 89.0,
-        "drainage_capacity_index": 0.3,
-        "water_body": "Yamuna River Floodplain",
-        "base_flood_vulnerability": 0.95
+        "flow_acc": 3900.0,
+        "distance_to_water_m": 60.0,
+        "impervious_surface_pct": 84.0,
+        "drainage_capacity_index": 0.29,
+        "water_body": "Mahanadi & Kathajodi Fork",
+        "base_flood_vulnerability": 0.94
       },
       {
-        "area_id": "DL-002",
-        "name": "Minto Bridge & Connaught Place",
-        "latitude": 28.634,
-        "longitude": 77.225,
-        "elevation_m": 210.0,
-        "slope_deg": 0.6,
-        "flow_acc": 1200.0,
-        "distance_to_water_m": 600.0,
-        "impervious_surface_pct": 95.0,
-        "drainage_capacity_index": 0.26,
-        "water_body": "Barapullah Drain System",
-        "base_flood_vulnerability": 0.88
-      },
-      {
-        "area_id": "DL-003",
-        "name": "Mayur Vihar & ITO Ring Road",
-        "latitude": 28.6044,
-        "longitude": 77.2954,
-        "elevation_m": 205.5,
-        "slope_deg": 0.5,
-        "flow_acc": 2200.0,
-        "distance_to_water_m": 210.0,
-        "impervious_surface_pct": 86.0,
-        "drainage_capacity_index": 0.32,
-        "water_body": "Yamuna East Bank Bundh",
-        "base_flood_vulnerability": 0.91
+        "area_id": "OD-003",
+        "name": "Puri (Coastal Surge & Banki Muhana)",
+        "latitude": 19.8135,
+        "longitude": 85.8312,
+        "elevation_m": 5.0,
+        "slope_deg": 0.3,
+        "flow_acc": 1400.0,
+        "distance_to_water_m": 150.0,
+        "impervious_surface_pct": 65.0,
+        "drainage_capacity_index": 0.38,
+        "water_body": "Bay of Bengal & Banki River",
+        "base_flood_vulnerability": 0.9
       }
     ]
   },
   {
-    "district_id": "WB-KOL",
-    "district_name": "Kolkata Metropolitan",
-    "state_code": "WB",
-    "state_name": "West Bengal",
-    "region_type": "Tidal River Delta",
-    "center_lat": 22.5726,
-    "center_lng": 88.3639,
-    "zoom": 12,
+    "district_id": "PB-ALL",
+    "district_name": "Punjab & Haryana (Ghaggar & Sutlej Plains)",
+    "state_code": "PB",
+    "state_name": "Punjab",
+    "region_type": "Plains & Seasonal Torrents",
+    "center_lat": 30.7,
+    "center_lng": 75.8,
+    "zoom": 7,
     "areas": [
       {
-        "area_id": "WB-001",
-        "name": "Thanthania & Central Avenue",
-        "latitude": 22.583,
-        "longitude": 88.3622,
-        "elevation_m": 5.2,
-        "slope_deg": 0.2,
-        "flow_acc": 1700.0,
-        "distance_to_water_m": 420.0,
-        "impervious_surface_pct": 93.0,
-        "drainage_capacity_index": 0.24,
-        "water_body": "Circular Canal & Hooghly",
-        "base_flood_vulnerability": 0.92
+        "area_id": "PB-001",
+        "name": "Ludhiana (Budha Nullah Floodplain)",
+        "latitude": 30.901,
+        "longitude": 75.8573,
+        "elevation_m": 244.0,
+        "slope_deg": 0.4,
+        "flow_acc": 2200.0,
+        "distance_to_water_m": 120.0,
+        "impervious_surface_pct": 85.0,
+        "drainage_capacity_index": 0.3,
+        "water_body": "Budha Nullah Stream",
+        "base_flood_vulnerability": 0.86
       },
       {
-        "area_id": "WB-002",
-        "name": "Behala & Taratala Lowlands",
-        "latitude": 22.5012,
-        "longitude": 88.3184,
-        "elevation_m": 4.5,
-        "slope_deg": 0.3,
-        "flow_acc": 2100.0,
-        "distance_to_water_m": 350.0,
-        "impervious_surface_pct": 85.0,
-        "drainage_capacity_index": 0.28,
-        "water_body": "Adi Ganga & Keorapukur Khal",
+        "area_id": "HR-001",
+        "name": "Ambala (Ghaggar River Embankment Zone)",
+        "latitude": 30.3782,
+        "longitude": 76.7767,
+        "elevation_m": 264.0,
+        "slope_deg": 0.5,
+        "flow_acc": 2600.0,
+        "distance_to_water_m": 90.0,
+        "impervious_surface_pct": 74.0,
+        "drainage_capacity_index": 0.32,
+        "water_body": "Tangri & Ghaggar Rivers",
         "base_flood_vulnerability": 0.89
       }
     ]
   },
   {
-    "district_id": "WB-DAR",
-    "district_name": "Darjeeling & Teesta Basin",
-    "state_code": "WB",
-    "state_name": "West Bengal",
-    "region_type": "Himalayan Foothills",
-    "center_lat": 26.9855,
-    "center_lng": 88.452,
-    "zoom": 11,
+    "district_id": "RJ-ALL",
+    "district_name": "Rajasthan (Dravyavati & Chambal Basins)",
+    "state_code": "RJ",
+    "state_name": "Rajasthan",
+    "region_type": "Semi-Arid Urban & Flash Flood",
+    "center_lat": 26.9,
+    "center_lng": 75.8,
+    "zoom": 7,
     "areas": [
       {
-        "area_id": "WB-003",
-        "name": "Kalimpong & Teesta Bazar",
-        "latitude": 27.0583,
-        "longitude": 88.4283,
-        "elevation_m": 220.0,
-        "slope_deg": 14.2,
-        "flow_acc": 3800.0,
-        "distance_to_water_m": 50.0,
-        "impervious_surface_pct": 42.0,
-        "drainage_capacity_index": 0.52,
-        "water_body": "Teesta River Gorge",
-        "base_flood_vulnerability": 0.95
-      }
-    ]
-  },
-  {
-    "district_id": "AS-KAM",
-    "district_name": "Kamrup (Guwahati)",
-    "state_code": "AS",
-    "state_name": "Assam",
-    "region_type": "Brahmaputra Valley",
-    "center_lat": 26.1445,
-    "center_lng": 91.7362,
-    "zoom": 12,
-    "areas": [
-      {
-        "area_id": "AS-001",
-        "name": "Anil Nagar & Nabin Nagar (Bharalu)",
-        "latitude": 26.172,
-        "longitude": 91.764,
-        "elevation_m": 51.0,
-        "slope_deg": 0.5,
-        "flow_acc": 2800.0,
-        "distance_to_water_m": 60.0,
-        "impervious_surface_pct": 86.0,
-        "drainage_capacity_index": 0.25,
-        "water_body": "Bharalu River Channel",
-        "base_flood_vulnerability": 0.96
+        "area_id": "RJ-001",
+        "name": "Jaipur (Dravyavati River Basin & Sanganer)",
+        "latitude": 26.8167,
+        "longitude": 75.7667,
+        "elevation_m": 412.0,
+        "slope_deg": 0.7,
+        "flow_acc": 1900.0,
+        "distance_to_water_m": 180.0,
+        "impervious_surface_pct": 82.0,
+        "drainage_capacity_index": 0.34,
+        "water_body": "Dravyavati (Amanishah) Nala",
+        "base_flood_vulnerability": 0.85
       },
       {
-        "area_id": "AS-002",
-        "name": "Rukminigaon & VIP Road",
-        "latitude": 26.1285,
-        "longitude": 91.7952,
-        "elevation_m": 53.5,
-        "slope_deg": 0.8,
-        "flow_acc": 1900.0,
-        "distance_to_water_m": 240.0,
-        "impervious_surface_pct": 79.0,
-        "drainage_capacity_index": 0.32,
-        "water_body": "Bahini River Spill",
-        "base_flood_vulnerability": 0.88
+        "area_id": "RJ-002",
+        "name": "Kota (Chambal River Barrage Spillway)",
+        "latitude": 25.18,
+        "longitude": 75.83,
+        "elevation_m": 271.0,
+        "slope_deg": 0.9,
+        "flow_acc": 3200.0,
+        "distance_to_water_m": 100.0,
+        "impervious_surface_pct": 76.0,
+        "drainage_capacity_index": 0.38,
+        "water_body": "Chambal River Basin",
+        "base_flood_vulnerability": 0.91
       }
     ]
   },
   {
-    "district_id": "AS-DIB",
-    "district_name": "Dibrugarh",
-    "state_code": "AS",
-    "state_name": "Assam",
-    "region_type": "Major River Dyke",
-    "center_lat": 27.4728,
-    "center_lng": 94.912,
-    "zoom": 12,
-    "areas": [
-      {
-        "area_id": "AS-003",
-        "name": "Dibrugarh Town Dyke & Mohanaghat",
-        "latitude": 27.485,
-        "longitude": 94.908,
-        "elevation_m": 105.0,
-        "slope_deg": 0.3,
-        "flow_acc": 4200.0,
-        "distance_to_water_m": 70.0,
-        "impervious_surface_pct": 68.0,
-        "drainage_capacity_index": 0.35,
-        "water_body": "Brahmaputra Mainstem",
-        "base_flood_vulnerability": 0.94
-      }
-    ]
-  },
-  {
-    "district_id": "TG-HYD",
-    "district_name": "Hyderabad",
+    "district_id": "TG-ALL",
+    "district_name": "Telangana (Hyderabad & Musi Basin)",
     "state_code": "TG",
     "state_name": "Telangana",
-    "region_type": "Deccan Urban Catchment",
+    "region_type": "Deccan Plateau Urban Catchment",
     "center_lat": 17.385,
     "center_lng": 78.4867,
-    "zoom": 12,
+    "zoom": 7,
     "areas": [
       {
         "area_id": "TG-001",
-        "name": "Begumpet & Rasoolpura",
+        "name": "Hyderabad (Begumpet & Rasoolpura Outfall)",
         "latitude": 17.4448,
         "longitude": 78.4723,
         "elevation_m": 515.0,
@@ -3041,7 +3197,7 @@ const INDIA_DATA = [
       },
       {
         "area_id": "TG-002",
-        "name": "Tolichowki & Nadeem Colony",
+        "name": "Hyderabad (Tolichowki & Nadeem Colony Basin)",
         "latitude": 17.3996,
         "longitude": 78.4118,
         "elevation_m": 508.0,
@@ -3055,7 +3211,7 @@ const INDIA_DATA = [
       },
       {
         "area_id": "TG-003",
-        "name": "Malakpet & Chaderghat Causeway",
+        "name": "Hyderabad (Malakpet & Chaderghat Causeway)",
         "latitude": 17.3752,
         "longitude": 78.4965,
         "elevation_m": 498.0,
@@ -3070,162 +3226,18 @@ const INDIA_DATA = [
     ]
   },
   {
-    "district_id": "AP-VSP",
-    "district_name": "Visakhapatnam",
-    "state_code": "AP",
-    "state_name": "Andhra Pradesh",
-    "region_type": "Bay of Bengal Coastal Lowland",
-    "center_lat": 17.6868,
-    "center_lng": 83.2185,
-    "zoom": 12,
-    "areas": [
-      {
-        "area_id": "AP-001",
-        "name": "Gajuwaka & Scindia Corridor",
-        "latitude": 17.6912,
-        "longitude": 83.1856,
-        "elevation_m": 6.8,
-        "slope_deg": 1.2,
-        "flow_acc": 1600.0,
-        "distance_to_water_m": 350.0,
-        "impervious_surface_pct": 79.0,
-        "drainage_capacity_index": 0.38,
-        "water_body": "Meghadrigedda Reservoir Runoff",
-        "base_flood_vulnerability": 0.85
-      }
-    ]
-  },
-  {
-    "district_id": "AP-VJA",
-    "district_name": "Vijayawada & Krishna Basin",
-    "state_code": "AP",
-    "state_name": "Andhra Pradesh",
-    "region_type": "River Confluence & Canal Delta",
-    "center_lat": 16.5062,
-    "center_lng": 80.648,
-    "zoom": 12,
-    "areas": [
-      {
-        "area_id": "AP-002",
-        "name": "Singhnagar & Budameru Canal Zone",
-        "latitude": 16.5385,
-        "longitude": 80.6415,
-        "elevation_m": 18.0,
-        "slope_deg": 0.5,
-        "flow_acc": 3300.0,
-        "distance_to_water_m": 50.0,
-        "impervious_surface_pct": 82.0,
-        "drainage_capacity_index": 0.28,
-        "water_body": "Budameru Rivulet & Krishna Spill",
-        "base_flood_vulnerability": 0.96
-      }
-    ]
-  },
-  {
-    "district_id": "OD-BBS",
-    "district_name": "Bhubaneswar & Cuttack",
-    "state_code": "OD",
-    "state_name": "Odisha",
-    "region_type": "Mahanadi Delta Urban",
-    "center_lat": 20.2961,
-    "center_lng": 85.8245,
-    "zoom": 12,
-    "areas": [
-      {
-        "area_id": "OD-001",
-        "name": "Bhubaneswar (Jayadev Vihar & Acharya Vihar)",
-        "latitude": 20.3025,
-        "longitude": 85.8285,
-        "elevation_m": 38.0,
-        "slope_deg": 0.8,
-        "flow_acc": 1700.0,
-        "distance_to_water_m": 220.0,
-        "impervious_surface_pct": 81.0,
-        "drainage_capacity_index": 0.35,
-        "water_body": "Gangua Nala Discharge",
-        "base_flood_vulnerability": 0.87
-      },
-      {
-        "area_id": "OD-002",
-        "name": "Cuttack Ring Road & Kathajodi Spills",
-        "latitude": 20.4625,
-        "longitude": 85.8828,
-        "elevation_m": 28.0,
-        "slope_deg": 0.4,
-        "flow_acc": 3900.0,
-        "distance_to_water_m": 60.0,
-        "impervious_surface_pct": 84.0,
-        "drainage_capacity_index": 0.29,
-        "water_body": "Mahanadi & Kathajodi Fork",
-        "base_flood_vulnerability": 0.94
-      }
-    ]
-  },
-  {
-    "district_id": "GJ-AMD",
-    "district_name": "Ahmedabad",
-    "state_code": "GJ",
-    "state_name": "Gujarat",
-    "region_type": "Sabarmati Basin Urban",
-    "center_lat": 23.0225,
-    "center_lng": 72.5714,
-    "zoom": 12,
-    "areas": [
-      {
-        "area_id": "GJ-001",
-        "name": "Sabarmati Riverfront & Usmanpura",
-        "latitude": 23.0482,
-        "longitude": 72.5721,
-        "elevation_m": 48.0,
-        "slope_deg": 0.6,
-        "flow_acc": 2200.0,
-        "distance_to_water_m": 90.0,
-        "impervious_surface_pct": 88.0,
-        "drainage_capacity_index": 0.36,
-        "water_body": "Sabarmati River Channel",
-        "base_flood_vulnerability": 0.86
-      }
-    ]
-  },
-  {
-    "district_id": "GJ-SUR",
-    "district_name": "Surat",
-    "state_code": "GJ",
-    "state_name": "Gujarat",
-    "region_type": "Tapi Estuary & Tidal Surge",
-    "center_lat": 21.1702,
-    "center_lng": 72.8311,
-    "zoom": 12,
-    "areas": [
-      {
-        "area_id": "GJ-002",
-        "name": "Adajan & Rander Lowlands",
-        "latitude": 21.1985,
-        "longitude": 72.7952,
-        "elevation_m": 12.0,
-        "slope_deg": 0.3,
-        "flow_acc": 3600.0,
-        "distance_to_water_m": 110.0,
-        "impervious_surface_pct": 85.0,
-        "drainage_capacity_index": 0.3,
-        "water_body": "Tapi River Mouth & Ukai Dam Release",
-        "base_flood_vulnerability": 0.94
-      }
-    ]
-  },
-  {
-    "district_id": "UP-LKO",
-    "district_name": "Lucknow",
+    "district_id": "UP-ALL",
+    "district_name": "Uttar Pradesh (Ganga, Yamuna & Gomti)",
     "state_code": "UP",
     "state_name": "Uttar Pradesh",
-    "region_type": "Gomti Basin Plains",
+    "region_type": "Gangetic Floodplain Plains",
     "center_lat": 26.8467,
     "center_lng": 80.9462,
-    "zoom": 12,
+    "zoom": 7,
     "areas": [
       {
         "area_id": "UP-001",
-        "name": "Gomti Barrage & Daliganj Ghats",
+        "name": "Lucknow (Gomti Barrage & Daliganj Lowlands)",
         "latitude": 26.8625,
         "longitude": 80.932,
         "elevation_m": 121.0,
@@ -3236,22 +3248,10 @@ const INDIA_DATA = [
         "drainage_capacity_index": 0.38,
         "water_body": "Gomti River Lowland",
         "base_flood_vulnerability": 0.86
-      }
-    ]
-  },
-  {
-    "district_id": "UP-VNS",
-    "district_name": "Varanasi & Prayagraj",
-    "state_code": "UP",
-    "state_name": "Uttar Pradesh",
-    "region_type": "Ganga & Yamuna Sangam",
-    "center_lat": 25.3176,
-    "center_lng": 82.9739,
-    "zoom": 12,
-    "areas": [
+      },
       {
         "area_id": "UP-002",
-        "name": "Assi Ghat & Varuna Confluence",
+        "name": "Varanasi (Assi Ghat & Varuna Confluence)",
         "latitude": 25.2882,
         "longitude": 83.0062,
         "elevation_m": 76.0,
@@ -3262,48 +3262,36 @@ const INDIA_DATA = [
         "drainage_capacity_index": 0.32,
         "water_body": "Ganga Mainstream & Varuna River",
         "base_flood_vulnerability": 0.93
-      }
-    ]
-  },
-  {
-    "district_id": "BR-PAT",
-    "district_name": "Patna & Ganga-Punpun Confluence",
-    "state_code": "BR",
-    "state_name": "Bihar",
-    "region_type": "Gangetic Flood Basin",
-    "center_lat": 25.5941,
-    "center_lng": 85.1376,
-    "zoom": 12,
-    "areas": [
+      },
       {
-        "area_id": "BR-001",
-        "name": "Kankarbagh & Rajendra Nagar",
-        "latitude": 25.5912,
-        "longitude": 85.1584,
-        "elevation_m": 51.5,
-        "slope_deg": 0.3,
-        "flow_acc": 3400.0,
-        "distance_to_water_m": 150.0,
-        "impervious_surface_pct": 88.0,
-        "drainage_capacity_index": 0.24,
-        "water_body": "Punpun & Ganga Backflow",
-        "base_flood_vulnerability": 0.95
+        "area_id": "UP-003",
+        "name": "Prayagraj (Sangam Low-Lying Ghats)",
+        "latitude": 25.4358,
+        "longitude": 81.8463,
+        "elevation_m": 88.0,
+        "slope_deg": 0.6,
+        "flow_acc": 4100.0,
+        "distance_to_water_m": 50.0,
+        "impervious_surface_pct": 79.0,
+        "drainage_capacity_index": 0.34,
+        "water_body": "Ganga-Yamuna Confluence",
+        "base_flood_vulnerability": 0.94
       }
     ]
   },
   {
-    "district_id": "UK-DED",
-    "district_name": "Dehradun & Haridwar",
+    "district_id": "HIM-ALL",
+    "district_name": "Uttarakhand & Himachal (Flash Flood Valleys)",
     "state_code": "UK",
     "state_name": "Uttarakhand",
-    "region_type": "Sub-Himalayan Flash Flood Corridor",
-    "center_lat": 30.3165,
-    "center_lng": 78.0322,
-    "zoom": 11,
+    "region_type": "Himalayan Torrential Flash Flood",
+    "center_lat": 30.5,
+    "center_lng": 78.0,
+    "zoom": 7,
     "areas": [
       {
         "area_id": "UK-001",
-        "name": "Rispana & Bindal River Beds",
+        "name": "Dehradun (Rispana & Bindal River Torrent Beds)",
         "latitude": 30.3015,
         "longitude": 78.0485,
         "elevation_m": 640.0,
@@ -3314,22 +3302,10 @@ const INDIA_DATA = [
         "drainage_capacity_index": 0.45,
         "water_body": "Song & Rispana Torrent",
         "base_flood_vulnerability": 0.91
-      }
-    ]
-  },
-  {
-    "district_id": "HP-KLU",
-    "district_name": "Kullu & Beas Valley",
-    "state_code": "HP",
-    "state_name": "Himachal Pradesh",
-    "region_type": "Himalayan Torrential Basin",
-    "center_lat": 31.9579,
-    "center_lng": 77.1095,
-    "zoom": 11,
-    "areas": [
+      },
       {
         "area_id": "HP-001",
-        "name": "Manali Old Town & Beas Bank",
+        "name": "Kullu-Manali (Beas River Main Flood Channel)",
         "latitude": 32.2432,
         "longitude": 77.1892,
         "elevation_m": 2050.0,
@@ -3340,22 +3316,90 @@ const INDIA_DATA = [
         "drainage_capacity_index": 0.48,
         "water_body": "Beas River Flood Channel",
         "base_flood_vulnerability": 0.94
+      },
+      {
+        "area_id": "UK-002",
+        "name": "Haridwar & Rishikesh (Ganga Spillway Lowlands)",
+        "latitude": 29.9457,
+        "longitude": 78.1642,
+        "elevation_m": 294.0,
+        "slope_deg": 2.2,
+        "flow_acc": 3700.0,
+        "distance_to_water_m": 90.0,
+        "impervious_surface_pct": 68.0,
+        "drainage_capacity_index": 0.42,
+        "water_body": "Ganga Mainstream",
+        "base_flood_vulnerability": 0.88
       }
     ]
   },
   {
-    "district_id": "JK-SRN",
-    "district_name": "Srinagar & Jhelum Basin",
+    "district_id": "WB-ALL",
+    "district_name": "West Bengal (Kolkata & Teesta Basin)",
+    "state_code": "WB",
+    "state_name": "West Bengal",
+    "region_type": "Tidal Delta & Himalayan Rivers",
+    "center_lat": 22.5726,
+    "center_lng": 88.3639,
+    "zoom": 7,
+    "areas": [
+      {
+        "area_id": "WB-001",
+        "name": "Kolkata (Thanthania & Central Avenue Bowl)",
+        "latitude": 22.583,
+        "longitude": 88.3622,
+        "elevation_m": 5.2,
+        "slope_deg": 0.2,
+        "flow_acc": 1700.0,
+        "distance_to_water_m": 420.0,
+        "impervious_surface_pct": 93.0,
+        "drainage_capacity_index": 0.24,
+        "water_body": "Circular Canal & Hooghly",
+        "base_flood_vulnerability": 0.92
+      },
+      {
+        "area_id": "WB-002",
+        "name": "Kolkata (Behala & Taratala Lowlands)",
+        "latitude": 22.5012,
+        "longitude": 88.3184,
+        "elevation_m": 4.5,
+        "slope_deg": 0.3,
+        "flow_acc": 2100.0,
+        "distance_to_water_m": 350.0,
+        "impervious_surface_pct": 85.0,
+        "drainage_capacity_index": 0.28,
+        "water_body": "Adi Ganga & Keorapukur Khal",
+        "base_flood_vulnerability": 0.89
+      },
+      {
+        "area_id": "WB-003",
+        "name": "Darjeeling-Kalimpong (Teesta Bazar Low Gorge)",
+        "latitude": 27.0583,
+        "longitude": 88.4283,
+        "elevation_m": 220.0,
+        "slope_deg": 14.2,
+        "flow_acc": 3800.0,
+        "distance_to_water_m": 50.0,
+        "impervious_surface_pct": 42.0,
+        "drainage_capacity_index": 0.52,
+        "water_body": "Teesta River Gorge",
+        "base_flood_vulnerability": 0.95
+      }
+    ]
+  },
+  {
+    "district_id": "JK-ALL",
+    "district_name": "Jammu & Kashmir (Jhelum & Tawi Basins)",
     "state_code": "JK",
     "state_name": "Jammu & Kashmir",
-    "region_type": "Kashmir Valley Lake & River",
+    "region_type": "Himalayan Valley Basin",
     "center_lat": 34.0837,
     "center_lng": 74.7973,
-    "zoom": 12,
+    "zoom": 7,
     "areas": [
       {
         "area_id": "JK-001",
-        "name": "Rajbagh & Lal Chowk (Jhelum Bund)",
+        "name": "Srinagar (Rajbagh & Lal Chowk Jhelum Bund)",
         "latitude": 34.0682,
         "longitude": 74.8192,
         "elevation_m": 1585.0,
@@ -3366,32 +3410,139 @@ const INDIA_DATA = [
         "drainage_capacity_index": 0.28,
         "water_body": "Jhelum River & Dal Lake Overflow",
         "base_flood_vulnerability": 0.95
+      },
+      {
+        "area_id": "JK-002",
+        "name": "Jammu (Tawi River Island & Gujjar Nagar)",
+        "latitude": 32.7266,
+        "longitude": 74.857,
+        "elevation_m": 327.0,
+        "slope_deg": 1.8,
+        "flow_acc": 2400.0,
+        "distance_to_water_m": 80.0,
+        "impervious_surface_pct": 76.0,
+        "drainage_capacity_index": 0.38,
+        "water_body": "Tawi River Basin",
+        "base_flood_vulnerability": 0.88
+      }
+    ]
+  },
+  {
+    "district_id": "GA-ALL",
+    "district_name": "Goa (Mandovi & Zuari Estuary)",
+    "state_code": "GA",
+    "state_name": "Goa",
+    "region_type": "Coastal Tidal Estuary",
+    "center_lat": 15.4989,
+    "center_lng": 73.8278,
+    "zoom": 10,
+    "areas": [
+      {
+        "area_id": "GA-001",
+        "name": "Panaji (Miramar & Mandovi Riverfront Lowlands)",
+        "latitude": 15.4855,
+        "longitude": 73.8058,
+        "elevation_m": 3.0,
+        "slope_deg": 0.3,
+        "flow_acc": 1500.0,
+        "distance_to_water_m": 90.0,
+        "impervious_surface_pct": 78.0,
+        "drainage_capacity_index": 0.4,
+        "water_body": "Mandovi River Estuary",
+        "base_flood_vulnerability": 0.84
+      }
+    ]
+  },
+  {
+    "district_id": "MP-ALL",
+    "district_name": "Madhya Pradesh (Narmada & Betwa)",
+    "state_code": "MP",
+    "state_name": "Madhya Pradesh",
+    "region_type": "Central Highlands & River Basins",
+    "center_lat": 23.2599,
+    "center_lng": 77.4126,
+    "zoom": 7,
+    "areas": [
+      {
+        "area_id": "MP-001",
+        "name": "Bhopal (Upper Lake Basin & VIP Road Spillway)",
+        "latitude": 23.245,
+        "longitude": 77.375,
+        "elevation_m": 505.0,
+        "slope_deg": 1.1,
+        "flow_acc": 1800.0,
+        "distance_to_water_m": 120.0,
+        "impervious_surface_pct": 79.0,
+        "drainage_capacity_index": 0.38,
+        "water_body": "Bhojtal (Upper Lake)",
+        "base_flood_vulnerability": 0.83
+      },
+      {
+        "area_id": "MP-002",
+        "name": "Hoshangabad (Sethani Ghat Narmada Floodplain)",
+        "latitude": 22.7519,
+        "longitude": 77.7289,
+        "elevation_m": 290.0,
+        "slope_deg": 0.8,
+        "flow_acc": 3600.0,
+        "distance_to_water_m": 60.0,
+        "impervious_surface_pct": 65.0,
+        "drainage_capacity_index": 0.36,
+        "water_body": "Narmada River Mainstream",
+        "base_flood_vulnerability": 0.92
       }
     ]
   }
 ];
+
+// Global helper for immediate close action from inline onclick or any caller
+window.closeInspectorPanel = function() {
+  const ws = document.querySelector(".app-workspace");
+  if (ws) ws.classList.add("inspector-hidden");
+  const p = document.getElementById("inspector-panel");
+  if (p) {
+    p.classList.remove("active");
+    p.style.display = "none";
+  }
+  if (window.floodApp) {
+    window.floodApp.currentAreaId = null;
+    if (window.floodApp.map) {
+      setTimeout(() => window.floodApp.map.invalidateSize(), 100);
+    }
+  }
+};
+
+window.openInspectorPanel = function(areaId) {
+  const ws = document.querySelector(".app-workspace");
+  if (ws) ws.classList.remove("inspector-hidden");
+  const p = document.getElementById("inspector-panel");
+  if (p) {
+    p.classList.add("active");
+    p.style.display = "flex";
+  }
+  if (window.floodApp) {
+    window.floodApp.renderZoneDetails(areaId);
+    if (window.floodApp.map) {
+      setTimeout(() => window.floodApp.map.invalidateSize(), 100);
+    }
+  }
+};
 
 class FloodGuardApp {
   constructor() {
     this.map = null;
     this.markers = {};
     this.polygons = {};
-    this.currentDistrictId = "ALL_INDIA"; // Start with Overall India view
-    this.currentAreaId = null; // No place force-selected on overall view
+    this.currentDistrictId = "ALL_INDIA";
+    this.currentAreaId = null;
     this.currentPredictions = {};
 
-    // Hydrological Simulation Defaults
+    // Precipitation Defaults
     this.rain24h = 120.0;
     this.rain1h = 35.0;
     this.rain3d = 180.0;
     this.temperature = 26.5;
     this.humidity = 88.0;
-
-    this.activeLayers = {
-      heat: true,
-      waterways: true,
-      shelters: true
-    };
   }
 
   async init() {
@@ -3399,17 +3550,17 @@ class FloodGuardApp {
     this.populateDistrictDropdown();
     this.bindEvents();
     this.initModals();
-    
-    // Initially close the inspector panel so the overall India map is clean and wide
+
+    // Start with inspector panel closed
     this.closeInspector();
 
-    // Trigger initial statewide/national inference
+    // Load Overall India
     await this.onDistrictChanged("ALL_INDIA");
   }
 
   initMap() {
-    // Center of India
-    this.map = L.map("leaflet-map", {
+    const mapContainerId = document.getElementById("gis-map") ? "gis-map" : "leaflet-map";
+    this.map = L.map(mapContainerId, {
       center: [22.8, 79.5],
       zoom: 5,
       zoomControl: false,
@@ -3418,7 +3569,6 @@ class FloodGuardApp {
 
     L.control.zoom({ position: "bottomright" }).addTo(this.map);
 
-    // Tactical dark basemap
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       className: "tactical-dark-tile"
@@ -3431,48 +3581,42 @@ class FloodGuardApp {
 
     distSelect.innerHTML = "";
 
-    // 1. National Overview
+    // 1. National
     const optIndia = document.createElement("option");
     optIndia.value = "ALL_INDIA";
-    optIndia.textContent = "🇮🇳 Overall India (All States & UTs)";
+    optIndia.textContent = "🇮🇳 All India (National Grid)";
     optIndia.selected = true;
     distSelect.appendChild(optIndia);
 
-    // 2. Tamil Nadu Statewide
+    // 2. Tamil Nadu Grid
     const optTN = document.createElement("option");
     optTN.value = "ALL_TN";
-    optTN.textContent = "🌟 All Tamil Nadu (38 Districts Grid)";
+    optTN.textContent = "🌟 Tamil Nadu (All 38 Districts Grid)";
     distSelect.appendChild(optTN);
 
-    // 3. Indian State Regional Groups
-    const stateGroups = [
-      { code: "STATE_MH", name: "🏙️ Maharashtra & Mumbai Metros", state: "Maharashtra" },
-      { code: "STATE_DL", name: "🏛️ Delhi NCR & Yamuna Basin", state: "Delhi NCR" },
-      { code: "STATE_KL", name: "🌴 Kerala (14 Districts Grid)", state: "Kerala" },
-      { code: "STATE_KA", name: "🏛️ Karnataka & Bengaluru", state: "Karnataka" },
-      { code: "STATE_WB", name: "🌊 West Bengal & Kolkata", state: "West Bengal" },
-      { code: "STATE_AS", name: "🏞️ Assam & Northeast Basin", state: "Assam" },
-      { code: "STATE_TG", name: "⚡ Telangana & Hyderabad", state: "Telangana" },
-      { code: "STATE_AP", name: "🌊 Andhra Pradesh (Coastal)", state: "Andhra Pradesh" },
-      { code: "STATE_OD", name: "🌊 Odisha (Mahanadi Basin)", state: "Odisha" },
-      { code: "STATE_GJ", name: "🏭 Gujarat (Surat & Ahmedabad)", state: "Gujarat" },
-      { code: "STATE_UP", name: "🌾 Uttar Pradesh (Ganga & Gomti)", state: "Uttar Pradesh" },
-      { code: "STATE_BR", name: "🌊 Bihar (Gangetic Confluence)", state: "Bihar" },
-      { code: "STATE_HIM", name: "⛰️ Uttarakhand & Himachal (Flash Flood)", state: ["Uttarakhand", "Himachal Pradesh"] },
-      { code: "STATE_JK", name: "🏔️ Jammu & Kashmir (Jhelum Basin)", state: "Jammu & Kashmir" }
-    ];
-
-    const groupStates = document.createElement("optgroup");
-    groupStates.label = "── Indian States & River Basins ──";
-    stateGroups.forEach(sg => {
-      const opt = document.createElement("option");
-      opt.value = sg.code;
-      opt.textContent = sg.name;
-      groupStates.appendChild(opt);
+    // 3. All other Indian States & UTs
+    const statesMap = {};
+    INDIA_DATA.forEach(d => {
+      if (d.state_name && d.state_name !== "Tamil Nadu") {
+        if (!statesMap[d.state_name]) {
+          statesMap[d.state_name] = [];
+        }
+        statesMap[d.state_name].push(d);
+      }
     });
-    distSelect.appendChild(groupStates);
 
-    // 4. Tamil Nadu Individual 38 Districts
+    const groupOtherStates = document.createElement("optgroup");
+    groupOtherStates.label = "── Indian States & Union Territories ──";
+    Object.keys(statesMap).sort().forEach(stName => {
+      const opt = document.createElement("option");
+      opt.value = `STATE_${stName}`;
+      const placeCount = statesMap[stName].reduce((acc, cur) => acc + cur.areas.length, 0);
+      opt.textContent = `🏛️ ${stName} (${placeCount} Places)`;
+      groupOtherStates.appendChild(opt);
+    });
+    distSelect.appendChild(groupOtherStates);
+
+    // 4. Tamil Nadu 38 Individual Districts
     const groupTN = document.createElement("optgroup");
     groupTN.label = "── Tamil Nadu Districts (38) ──";
     INDIA_DATA.filter(d => d.state_code === "TN").forEach(d => {
@@ -3488,17 +3632,17 @@ class FloodGuardApp {
     });
   }
 
-  populateAreaDropdown(areas, groupTitle = "All Areas in District") {
+  populateAreaDropdown(areas, groupTitle = "All Areas") {
     const areaSelect = document.getElementById("select-area");
     if (!areaSelect) return;
 
     areaSelect.innerHTML = "";
 
-    const allAreaOpt = document.createElement("option");
-    allAreaOpt.value = "ALL";
-    allAreaOpt.textContent = `⚡ ${groupTitle} (${areas.length} Places Monitored)`;
-    allAreaOpt.selected = true;
-    areaSelect.appendChild(allAreaOpt);
+    const allOpt = document.createElement("option");
+    allOpt.value = "ALL";
+    allOpt.textContent = `⚡ ${groupTitle} (${areas.length} Places Selected)`;
+    allOpt.selected = true;
+    areaSelect.appendChild(allOpt);
 
     areas.forEach(a => {
       const opt = document.createElement("option");
@@ -3514,35 +3658,11 @@ class FloodGuardApp {
   }
 
   closeInspector() {
-    const workspace = document.querySelector(".app-workspace");
-    if (workspace) {
-      workspace.classList.add("inspector-hidden");
-    }
-    const panel = document.getElementById("inspector-panel");
-    if (panel) {
-      panel.classList.remove("active");
-      panel.style.display = "none";
-    }
-    this.currentAreaId = null;
-    if (this.map) {
-      setTimeout(() => this.map.invalidateSize(), 150);
-    }
+    window.closeInspectorPanel();
   }
 
   openInspector(areaId) {
-    const workspace = document.querySelector(".app-workspace");
-    if (workspace) {
-      workspace.classList.remove("inspector-hidden");
-    }
-    const panel = document.getElementById("inspector-panel");
-    if (panel) {
-      panel.classList.add("active");
-      panel.style.display = "flex";
-    }
-    this.renderZoneDetails(areaId);
-    if (this.map) {
-      setTimeout(() => this.map.invalidateSize(), 150);
-    }
+    window.openInspectorPanel(areaId);
   }
 
   async onDistrictChanged(selectionKey) {
@@ -3554,12 +3674,11 @@ class FloodGuardApp {
     let targetCenter = [13.04, 80.22];
 
     if (selectionKey === "ALL_INDIA") {
-      // Include representative hotspots from across every state in India
       INDIA_DATA.forEach(d => activeAreas.push(...d.areas));
       groupTitle = "All India National Hotspots";
       targetCenter = [22.8, 79.5];
       targetZoom = 5;
-      this.closeInspector(); // DO NOT force open any single place on overall India
+      this.closeInspector();
     } else if (selectionKey === "ALL_TN") {
       INDIA_DATA.filter(d => d.state_code === "TN").forEach(d => activeAreas.push(...d.areas));
       groupTitle = "All Tamil Nadu Places";
@@ -3567,29 +3686,10 @@ class FloodGuardApp {
       targetZoom = 7;
       this.closeInspector();
     } else if (selectionKey.startsWith("STATE_")) {
-      const stateMap = {
-        "STATE_MH": "Maharashtra",
-        "STATE_DL": "Delhi NCR",
-        "STATE_KL": "Kerala",
-        "STATE_KA": "Karnataka",
-        "STATE_WB": "West Bengal",
-        "STATE_AS": "Assam",
-        "STATE_TG": "Telangana",
-        "STATE_AP": "Andhra Pradesh",
-        "STATE_OD": "Odisha",
-        "STATE_GJ": "Gujarat",
-        "STATE_UP": "Uttar Pradesh",
-        "STATE_BR": "Bihar",
-        "STATE_HIM": ["Uttarakhand", "Himachal Pradesh"],
-        "STATE_JK": "Jammu & Kashmir"
-      };
-      const targetState = stateMap[selectionKey];
-      const matched = INDIA_DATA.filter(d => {
-        if (Array.isArray(targetState)) return targetState.includes(d.state_name);
-        return d.state_name === targetState;
-      });
+      const stName = selectionKey.replace("STATE_", "");
+      const matched = INDIA_DATA.filter(d => d.state_name === stName);
       matched.forEach(d => activeAreas.push(...d.areas));
-      groupTitle = `All ${Array.isArray(targetState) ? 'Himalayan' : targetState} Nodes`;
+      groupTitle = `All ${stName} Places`;
       if (matched.length > 0) {
         targetCenter = [matched[0].center_lat, matched[0].center_lng];
         targetZoom = matched[0].zoom ? Math.max(7, matched[0].zoom - 2) : 7;
@@ -3599,12 +3699,11 @@ class FloodGuardApp {
       const district = INDIA_DATA.find(d => d.district_id === selectionKey);
       if (district) {
         activeAreas = district.areas;
-        groupTitle = `${district.district_name} Areas`;
+        groupTitle = `${district.district_name} Places`;
         targetCenter = [district.center_lat, district.center_lng];
         targetZoom = district.zoom || 11;
       }
-      // If a single district with 1-3 places is picked, open inspector on the 1st place
-      if (activeAreas.length > 0 && activeAreas.length <= 4) {
+      if (activeAreas.length > 0 && activeAreas.length <= 3) {
         this.openInspector(activeAreas[0].area_id);
       } else {
         this.closeInspector();
@@ -3622,7 +3721,7 @@ class FloodGuardApp {
 
     // Render area markers
     activeAreas.forEach(a => {
-      const circleRadius = (selectionKey === "ALL_INDIA" || selectionKey === "ALL_TN") ? 3500 : 1400;
+      const circleRadius = (selectionKey === "ALL_INDIA" || selectionKey === "ALL_TN") ? 3200 : 1400;
       const circle = L.circle([a.latitude, a.longitude], {
         radius: circleRadius,
         color: "#ef4444",
@@ -3676,10 +3775,9 @@ class FloodGuardApp {
       INDIA_DATA.filter(d => d.state_code === "TN").forEach(d => all.push(...d.areas));
       return all;
     } else if (this.currentDistrictId.startsWith("STATE_")) {
+      const stName = this.currentDistrictId.replace("STATE_", "");
       const all = [];
-      INDIA_DATA.forEach(d => {
-        all.push(...d.areas);
-      });
+      INDIA_DATA.filter(d => d.state_name === stName).forEach(d => all.push(...d.areas));
       return all;
     } else {
       const d = INDIA_DATA.find(x => x.district_id === this.currentDistrictId);
@@ -3752,9 +3850,12 @@ class FloodGuardApp {
       }
     });
 
-    document.getElementById("kpi-high-count").textContent = highCount;
-    document.getElementById("kpi-mod-count").textContent = modCount;
-    document.getElementById("kpi-low-count").textContent = lowCount;
+    const elH = document.getElementById("kpi-high-count");
+    if (elH) elH.textContent = highCount;
+    const elM = document.getElementById("kpi-mod-count");
+    if (elM) elM.textContent = modCount;
+    const elL = document.getElementById("kpi-low-count");
+    if (elL) elL.textContent = lowCount;
 
     // Update Threat Overview Title
     const kpiHeader = document.getElementById("kpi-header-title");
@@ -3762,7 +3863,9 @@ class FloodGuardApp {
       let dName = "National";
       if (this.currentDistrictId === "ALL_INDIA") dName = "India National";
       else if (this.currentDistrictId === "ALL_TN") dName = "Tamil Nadu Statewide";
-      else {
+      else if (this.currentDistrictId.startsWith("STATE_")) {
+        dName = this.currentDistrictId.replace("STATE_", "");
+      } else {
         const matched = INDIA_DATA.find(d => d.district_id === this.currentDistrictId);
         dName = matched ? matched.district_name : "Regional";
       }
@@ -3774,7 +3877,9 @@ class FloodGuardApp {
     if (bannerTag) {
       let bLabel = "India National Grid";
       if (this.currentDistrictId === "ALL_TN") bLabel = "Tamil Nadu Grid";
-      else if (this.currentDistrictId !== "ALL_INDIA") {
+      else if (this.currentDistrictId.startsWith("STATE_")) {
+        bLabel = `${this.currentDistrictId.replace("STATE_", "")} State Grid`;
+      } else if (this.currentDistrictId !== "ALL_INDIA") {
         const matched = INDIA_DATA.find(d => d.district_id === this.currentDistrictId);
         bLabel = matched ? `${matched.district_name} Region` : "Regional Grid";
       }
@@ -3869,7 +3974,6 @@ class FloodGuardApp {
 
     const pred = this.currentPredictions[areaId] || this.simulateSingleClient(zone);
 
-    // Safe update of zone card elements matching index.html IDs
     const elId = document.getElementById("detail-zone-id") || document.getElementById("detail-zone-badge");
     if (elId) elId.textContent = zone.area_id;
 
@@ -3922,7 +4026,6 @@ class FloodGuardApp {
       });
     }
 
-    // Terrain & Drainage attributes
     const elElev = document.getElementById("detail-elevation") || document.getElementById("attr-elev-val");
     if (elElev) elElev.textContent = `${zone.elevation_m} meters`;
 
@@ -3941,28 +4044,36 @@ class FloodGuardApp {
     const sliderR1h = document.getElementById("input-rain-1h");
     const sliderR3d = document.getElementById("input-rain-3d");
 
-    sliderR24.addEventListener("input", (e) => {
-      this.rain24h = parseFloat(e.target.value);
-      document.getElementById("val-rain-24h").textContent = `${this.rain24h} mm`;
-      if (this.rain3d < this.rain24h) {
-        this.rain3d = this.rain24h;
-        sliderR3d.value = this.rain3d;
+    if (sliderR24) {
+      sliderR24.addEventListener("input", (e) => {
+        this.rain24h = parseFloat(e.target.value);
+        document.getElementById("val-rain-24h").textContent = `${this.rain24h} mm`;
+        if (this.rain3d < this.rain24h) {
+          this.rain3d = this.rain24h;
+          if (sliderR3d) {
+            sliderR3d.value = this.rain3d;
+            document.getElementById("val-rain-3d").textContent = `${this.rain3d} mm`;
+          }
+        }
+        this.debouncedRecalculate();
+      });
+    }
+
+    if (sliderR1h) {
+      sliderR1h.addEventListener("input", (e) => {
+        this.rain1h = parseFloat(e.target.value);
+        document.getElementById("val-rain-1h").textContent = `${this.rain1h} mm`;
+        this.debouncedRecalculate();
+      });
+    }
+
+    if (sliderR3d) {
+      sliderR3d.addEventListener("input", (e) => {
+        this.rain3d = parseFloat(e.target.value);
         document.getElementById("val-rain-3d").textContent = `${this.rain3d} mm`;
-      }
-      this.debouncedRecalculate();
-    });
-
-    sliderR1h.addEventListener("input", (e) => {
-      this.rain1h = parseFloat(e.target.value);
-      document.getElementById("val-rain-1h").textContent = `${this.rain1h} mm`;
-      this.debouncedRecalculate();
-    });
-
-    sliderR3d.addEventListener("input", (e) => {
-      this.rain3d = parseFloat(e.target.value);
-      document.getElementById("val-rain-3d").textContent = `${this.rain3d} mm`;
-      this.debouncedRecalculate();
-    });
+        this.debouncedRecalculate();
+      });
+    }
 
     // Preset buttons
     document.querySelectorAll(".preset-pill").forEach(btn => {
@@ -3982,12 +4093,15 @@ class FloodGuardApp {
       });
     });
 
-    document.getElementById("btn-recalculate").addEventListener("click", () => {
-      const areas = this.getActiveAreas();
-      this.calculatePredictions(areas);
-    });
+    const btnRecalc = document.getElementById("btn-recalculate");
+    if (btnRecalc) {
+      btnRecalc.addEventListener("click", () => {
+        const areas = this.getActiveAreas();
+        this.calculatePredictions(areas);
+      });
+    }
 
-    // Close / Delete Inspector Button
+    // Close button event listener
     const btnClose = document.getElementById("btn-close-inspector");
     if (btnClose) {
       btnClose.addEventListener("click", (e) => {
@@ -4005,7 +4119,6 @@ class FloodGuardApp {
         if (q.length < 2) return;
 
         for (const d of INDIA_DATA) {
-          // If search matches area
           const found = d.areas.find(z => z.name.toLowerCase().includes(q) || z.area_id.toLowerCase().includes(q));
           if (found) {
             const distSelect = document.getElementById("select-district");
@@ -4019,7 +4132,6 @@ class FloodGuardApp {
             }
             return;
           }
-          // If search matches district name
           if (d.district_name.toLowerCase().includes(q)) {
             const distSelect = document.getElementById("select-district");
             if (distSelect && distSelect.value !== d.district_id) {
@@ -4040,14 +4152,25 @@ class FloodGuardApp {
     this.temperature = temp;
     this.humidity = hum;
 
-    document.getElementById("input-rain-24h").value = r24;
-    document.getElementById("val-rain-24h").textContent = `${r24} mm`;
-    document.getElementById("input-rain-1h").value = r1h;
-    document.getElementById("val-rain-1h").textContent = `${r1h} mm`;
-    document.getElementById("input-rain-3d").value = r3d;
-    document.getElementById("val-rain-3d").textContent = `${r3d} mm`;
-    document.getElementById("val-temp").textContent = `${temp.toFixed(1)}°C`;
-    document.getElementById("val-humidity").textContent = `${Math.round(hum)}%`;
+    const el24 = document.getElementById("input-rain-24h");
+    if (el24) el24.value = r24;
+    const v24 = document.getElementById("val-rain-24h");
+    if (v24) v24.textContent = `${r24} mm`;
+
+    const el1h = document.getElementById("input-rain-1h");
+    if (el1h) el1h.value = r1h;
+    const v1h = document.getElementById("val-rain-1h");
+    if (v1h) v1h.textContent = `${r1h} mm`;
+
+    const el3d = document.getElementById("input-rain-3d");
+    if (el3d) el3d.value = r3d;
+    const v3d = document.getElementById("val-rain-3d");
+    if (v3d) v3d.textContent = `${r3d} mm`;
+
+    const vTemp = document.getElementById("val-temp");
+    if (vTemp) vTemp.textContent = `${temp.toFixed(1)}°C`;
+    const vHum = document.getElementById("val-humidity");
+    if (vHum) vHum.textContent = `${Math.round(hum)}%`;
 
     const areas = this.getActiveAreas();
     this.calculatePredictions(areas);

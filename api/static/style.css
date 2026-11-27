@@ -1578,3 +1578,39 @@ body.dark-theme {
   margin: 0 !important;
   border: none !important;
 }
+
+/* Responsive Inspector Panel Removal */
+.app-workspace.inspector-hidden {
+  grid-template-columns: 360px 1fr 0px !important;
+}
+
+.app-workspace.inspector-hidden .right-inspector-panel,
+.app-workspace.inspector-hidden #inspector-panel {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.close-inspector-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.close-inspector-btn:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  border-color: #ef4444 !important;
+}
