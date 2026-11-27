@@ -1,3 +1,23 @@
+
+// Global modal helpers
+window.openModal = function(modalId) {
+  const m = document.getElementById(modalId);
+  if (m) {
+    m.classList.add("open");
+    m.classList.add("active");
+    m.style.display = "flex";
+  }
+};
+
+window.closeModal = function(modalId) {
+  const m = document.getElementById(modalId);
+  if (m) {
+    m.classList.remove("open");
+    m.classList.remove("active");
+    m.style.display = "none";
+  }
+};
+
 /**
  * FLOODGUARD AI - All-India & Tamil Nadu Urban Flood Intelligence Platform
  */
@@ -4157,9 +4177,25 @@ class FloodGuardApp {
       }
     };
 
-    setupModal("btn-model-card", "modal-model-card", "btn-close-model-card");
-    setupModal("btn-live-weather", "modal-weather-feed", "btn-close-weather");
-    setupModal("btn-emergency", "modal-emergency", "btn-close-emergency");
+    const bindModal = (btnId, modalId, closeBtnId) => {
+      const btn = document.getElementById(btnId);
+      const closeBtn = document.getElementById(closeBtnId);
+      const modal = document.getElementById(modalId);
+      if (btn) {
+        btn.onclick = (e) => { e.preventDefault(); window.openModal(modalId); };
+      }
+      if (closeBtn) {
+        closeBtn.onclick = (e) => { e.preventDefault(); window.closeModal(modalId); };
+      }
+      if (modal) {
+        modal.onclick = (e) => {
+          if (e.target === modal) window.closeModal(modalId);
+        };
+      }
+    };
+    bindModal("btn-model-card", "modal-model-card", "btn-close-model-card");
+    bindModal("btn-live-weather", "modal-weather-feed", "btn-close-weather");
+    bindModal("btn-emergency", "modal-emergency", "btn-close-emergency");
   }
 }
 

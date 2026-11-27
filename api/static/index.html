@@ -1726,6 +1726,23 @@ body.dark-theme {
   border-color: #ef4444 !important;
 }
 
+
+/* Modal Display Support (Both .open and .active) */
+.modal-backdrop.open,
+.modal-backdrop.active {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 9999 !important;
+}
+
+.modal-dialog {
+  z-index: 10000 !important;
+}
+
 </style>
 </head>
 <body class="dark-theme">
@@ -1765,15 +1782,15 @@ body.dark-theme {
 
     <!-- Header Actions -->
     <div class="header-right">
-      <button id="btn-live-weather" class="header-action-btn" title="Live Doppler Radar & IMD Station Feed">
+      <button id="btn-live-weather" class="header-action-btn" title="Live Doppler Radar & IMD Station Feed" type="button" onclick="window.openModal('modal-weather-feed')">
         <i class="fa-solid fa-satellite-dish"></i>
         <span class="btn-text">Doppler Feed</span>
       </button>
-      <button id="btn-model-card" class="header-action-btn" title="Model Card, Validation Metrics & SHAP">
+      <button id="btn-model-card" class="header-action-btn" title="Model Card, Validation Metrics & SHAP" type="button" onclick="window.openModal('modal-model-card')">
         <i class="fa-solid fa-chart-line"></i>
         <span class="btn-text">Model Card</span>
       </button>
-      <button id="btn-emergency" class="header-action-btn danger-glow" title="Emergency Contacts & Rescue Helplines">
+      <button id="btn-emergency" class="header-action-btn danger-glow" title="Emergency Contacts & Rescue Helplines" type="button" onclick="window.openModal('modal-emergency')">
         <i class="fa-solid fa-phone-volume"></i>
         <span class="btn-text">SOS Helplines</span>
       </button>
@@ -2072,14 +2089,14 @@ body.dark-theme {
   </nav>
 
   <!-- MODAL: Model Transparency Card & Evaluation Metrics -->
-  <div class="modal-backdrop" id="modal-model-card">
+  <div class="modal-backdrop" id="modal-model-card" onclick="if(event.target===this)window.closeModal('modal-model-card')">
     <div class="modal-dialog glass-card">
       <div class="modal-header">
         <div class="modal-title">
           <i class="fa-solid fa-award"></i>
           <span>Model Card & Validation Metrics (XGBoost 3.4.1)</span>
         </div>
-        <button class="modal-close-btn" id="btn-close-model-card"><i class="fa-solid fa-xmark"></i></button>
+        <button class="modal-close-btn" id="btn-close-model-card" type="button" onclick="window.closeModal('modal-model-card')"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="modal-body">
         <div class="metrics-grid">
@@ -2128,14 +2145,14 @@ body.dark-theme {
   </div>
 
   <!-- MODAL: Live Doppler Radar & Meteorological Feed -->
-  <div class="modal-backdrop" id="modal-weather-feed">
+  <div class="modal-backdrop" id="modal-weather-feed" onclick="if(event.target===this)window.closeModal('modal-weather-feed')">
     <div class="modal-dialog glass-card">
       <div class="modal-header">
         <div class="modal-title">
           <i class="fa-solid fa-satellite"></i>
           <span>Live IMD Doppler Radar & Catchment Telemetry</span>
         </div>
-        <button class="modal-close-btn" id="btn-close-weather"><i class="fa-solid fa-xmark"></i></button>
+        <button class="modal-close-btn" id="btn-close-weather" type="button" onclick="window.closeModal('modal-weather-feed')"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="modal-body">
         <div class="weather-station-grid">
@@ -2176,14 +2193,14 @@ body.dark-theme {
   </div>
 
   <!-- MODAL: Emergency SOS & Helplines -->
-  <div class="modal-backdrop" id="modal-emergency">
+  <div class="modal-backdrop" id="modal-emergency" onclick="if(event.target===this)window.closeModal('modal-emergency')">
     <div class="modal-dialog glass-card">
       <div class="modal-header">
         <div class="modal-title text-danger">
           <i class="fa-solid fa-triangle-exclamation"></i>
           <span>Disaster Response & Emergency Contacts</span>
         </div>
-        <button class="modal-close-btn" id="btn-close-emergency"><i class="fa-solid fa-xmark"></i></button>
+        <button class="modal-close-btn" id="btn-close-emergency" type="button" onclick="window.closeModal('modal-emergency')"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="modal-body">
         <div class="emergency-contact-list">
@@ -2238,6 +2255,26 @@ body.dark-theme {
 
 
 <script>
+
+// Global modal helpers
+window.openModal = function(modalId) {
+  const m = document.getElementById(modalId);
+  if (m) {
+    m.classList.add("open");
+    m.classList.add("active");
+    m.style.display = "flex";
+  }
+};
+
+window.closeModal = function(modalId) {
+  const m = document.getElementById(modalId);
+  if (m) {
+    m.classList.remove("open");
+    m.classList.remove("active");
+    m.style.display = "none";
+  }
+};
+
 /**
  * FLOODGUARD AI - All-India & Tamil Nadu Urban Flood Intelligence Platform
  */
@@ -6397,9 +6434,25 @@ class FloodGuardApp {
       }
     };
 
-    setupModal("btn-model-card", "modal-model-card", "btn-close-model-card");
-    setupModal("btn-live-weather", "modal-weather-feed", "btn-close-weather");
-    setupModal("btn-emergency", "modal-emergency", "btn-close-emergency");
+    const bindModal = (btnId, modalId, closeBtnId) => {
+      const btn = document.getElementById(btnId);
+      const closeBtn = document.getElementById(closeBtnId);
+      const modal = document.getElementById(modalId);
+      if (btn) {
+        btn.onclick = (e) => { e.preventDefault(); window.openModal(modalId); };
+      }
+      if (closeBtn) {
+        closeBtn.onclick = (e) => { e.preventDefault(); window.closeModal(modalId); };
+      }
+      if (modal) {
+        modal.onclick = (e) => {
+          if (e.target === modal) window.closeModal(modalId);
+        };
+      }
+    };
+    bindModal("btn-model-card", "modal-model-card", "btn-close-model-card");
+    bindModal("btn-live-weather", "modal-weather-feed", "btn-close-weather");
+    bindModal("btn-emergency", "modal-emergency", "btn-close-emergency");
   }
 }
 
