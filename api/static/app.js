@@ -3869,50 +3869,71 @@ class FloodGuardApp {
 
     const pred = this.currentPredictions[areaId] || this.simulateSingleClient(zone);
 
-    // Update zone card elements
-    document.getElementById("detail-zone-badge").textContent = zone.area_id;
-    document.getElementById("detail-zone-name").textContent = zone.name;
-    const stLabel = zone.state_name ? ` • ${zone.state_name}` : "";
-    document.getElementById("detail-zone-geo").textContent = 
-      `Lat: ${zone.latitude.toFixed(4)} • Lng: ${zone.longitude.toFixed(4)} • Elevation: ${zone.elevation_m}m MSL${stLabel}`;
+    // Safe update of zone card elements matching index.html IDs
+    const elId = document.getElementById("detail-zone-id") || document.getElementById("detail-zone-badge");
+    if (elId) elId.textContent = zone.area_id;
+
+    const elName = document.getElementById("detail-zone-name");
+    if (elName) elName.textContent = zone.name;
+
+    const elGeo = document.getElementById("detail-zone-geo");
+    if (elGeo) {
+      const stLabel = zone.state_name ? ` • ${zone.state_name}` : "";
+      elGeo.textContent = `Lat: ${zone.latitude.toFixed(4)} • Lng: ${zone.longitude.toFixed(4)} • Elevation: ${zone.elevation_m}m MSL${stLabel}`;
+    }
 
     const probPct = Math.round(pred.risk_probability * 100);
-    document.getElementById("detail-prob-val").textContent = `${probPct}%`;
+    const elPct = document.getElementById("detail-risk-percent") || document.getElementById("detail-prob-val");
+    if (elPct) elPct.textContent = `${probPct}%`;
 
-    const circle = document.getElementById("detail-gauge-circle");
-    const circumference = 2 * Math.PI * 40;
-    circle.style.strokeDashoffset = circumference - (pred.risk_probability * circumference);
-    circle.style.stroke = pred.badge_color;
+    const circle = document.getElementById("risk-gauge-circle") || document.getElementById("detail-gauge-circle");
+    if (circle) {
+      const circumference = 2 * Math.PI * 46;
+      circle.style.strokeDashoffset = circumference - (pred.risk_probability * circumference);
+      circle.style.stroke = pred.badge_color;
+    }
 
     const badge = document.getElementById("detail-risk-badge");
-    badge.textContent = `${pred.risk_band} RISK`;
-    badge.className = `risk-status-badge ${pred.risk_band.toLowerCase()}`;
-    document.getElementById("detail-severity-desc").textContent = pred.severity_description;
+    if (badge) {
+      badge.textContent = `${pred.risk_band} RISK`;
+      badge.className = `risk-status-badge ${pred.risk_band.toLowerCase()}`;
+    }
 
-    const factorsContainer = document.getElementById("detail-shap-factors");
-    factorsContainer.innerHTML = "";
+    const elDesc = document.getElementById("detail-severity-desc");
+    if (elDesc) elDesc.textContent = pred.severity_description;
 
-    const factors = pred.factor_contributions || [];
-    factors.forEach(f => {
-      const item = document.createElement("div");
-      item.className = "factor-item";
-      item.innerHTML = `
-        <div class="factor-header">
-          <span class="f-label">${f.label}</span>
-          <span class="f-val">${f.value} <span class="f-impact">(${f.impact_score} impact)</span></span>
-        </div>
-        <div class="factor-bar-track">
-          <div class="factor-bar-fill" style="width: ${Math.min(100, Math.max(8, Math.abs(parseFloat(f.impact_score || 0.1)) * 34))}%"></div>
-        </div>
-      `;
-      factorsContainer.appendChild(item);
-    });
+    const factorsContainer = document.getElementById("factor-bars-container") || document.getElementById("detail-shap-factors");
+    if (factorsContainer) {
+      factorsContainer.innerHTML = "";
+      const factors = pred.factor_contributions || [];
+      factors.forEach(f => {
+        const item = document.createElement("div");
+        item.className = "factor-item";
+        item.innerHTML = `
+          <div class="factor-header">
+            <span class="f-label">${f.label}</span>
+            <span class="f-val">${f.value} <span class="f-impact">(${f.impact_score} impact)</span></span>
+          </div>
+          <div class="factor-bar-track">
+            <div class="factor-bar-fill" style="width: ${Math.min(100, Math.max(8, Math.abs(parseFloat(f.impact_score || 0.1)) * 34))}%"></div>
+          </div>
+        `;
+        factorsContainer.appendChild(item);
+      });
+    }
 
     // Terrain & Drainage attributes
-    document.getElementById("attr-elev-val").textContent = `${zone.elevation_m} meters`;
-    document.getElementById("attr-water-val").textContent = `${zone.distance_to_water_m || 350}m (${zone.water_body || 'Major Drain'})`;
-    document.getElementById("attr-impervious-val").textContent = `${zone.impervious_surface_pct || 75}%`;
-    document.getElementById("attr-drainage-val").textContent = `${zone.drainage_capacity_index || 0.4} (Index)`;
+    const elElev = document.getElementById("detail-elevation") || document.getElementById("attr-elev-val");
+    if (elElev) elElev.textContent = `${zone.elevation_m} meters`;
+
+    const elWater = document.getElementById("detail-dist-water") || document.getElementById("attr-water-val");
+    if (elWater) elWater.textContent = `${zone.distance_to_water_m || 350}m (${zone.water_body || 'Major Drain'})`;
+
+    const elImp = document.getElementById("detail-impervious") || document.getElementById("attr-impervious-val");
+    if (elImp) elImp.textContent = `${zone.impervious_surface_pct || 75}%`;
+
+    const elDrain = document.getElementById("detail-drainage") || document.getElementById("attr-drainage-val");
+    if (elDrain) elDrain.textContent = `${zone.drainage_capacity_index || 0.4} (Restricted)`;
   }
 
   bindEvents() {

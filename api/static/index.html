@@ -1590,6 +1590,21 @@ body.dark-theme {
   display: none !important;
 }
 
+/* Responsive Inspector Panel Toggling - Full width expansion */
+.app-workspace.inspector-hidden {
+  grid-template-columns: 360px 1fr 0px !important;
+}
+
+.app-workspace.inspector-hidden .right-inspector-panel,
+.app-workspace.inspector-hidden #inspector-panel {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
 </style>
 </head>
 <body class="dark-theme">
@@ -1804,7 +1819,7 @@ body.dark-theme {
           <h2 class="zone-name-title" id="detail-zone-name">Velachery Ward</h2>
           <span class="zone-category" id="detail-zone-geo">Lat: 12.9756 • Lng: 80.2206 • Elevation: 4.2m</span>
         </div>
-        <button class="close-inspector-btn" id="btn-close-inspector" title="Close Panel">
+        <button class="close-inspector-btn" id="btn-close-inspector" title="Close Panel" onclick="if(window.floodApp){window.floodApp.closeInspector();}else{document.querySelector('.app-workspace').classList.add('inspector-hidden');document.getElementById('inspector-panel').style.display='none';}">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>

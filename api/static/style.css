@@ -1563,3 +1563,18 @@ body.dark-theme {
 .app-workspace.inspector-hidden .right-inspector-panel {
   display: none !important;
 }
+
+/* Responsive Inspector Panel Toggling - Full width expansion */
+.app-workspace.inspector-hidden {
+  grid-template-columns: 360px 1fr 0px !important;
+}
+
+.app-workspace.inspector-hidden .right-inspector-panel,
+.app-workspace.inspector-hidden #inspector-panel {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
