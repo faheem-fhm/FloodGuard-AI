@@ -1,1491 +1,15 @@
 [
   {
-    "partition_key": "TRY-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-cad80009",
-    "prediction_id": "FG-20261127031638-cad80009",
-    "area_id": "TRY-003",
-    "area_name": "Lalgudi",
-    "risk_probability": 0.9033,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "SLM-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-e4a514cf",
-    "prediction_id": "FG-20261127031638-e4a514cf",
-    "area_id": "SLM-001",
-    "area_name": "Salem City",
-    "risk_probability": 0.9674,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "SLM-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-df955abe",
-    "prediction_id": "FG-20261127031638-df955abe",
-    "area_id": "SLM-002",
-    "area_name": "Mettur Dam Town",
-    "risk_probability": 0.594,
-    "risk_band": "MODERATE",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "ERD-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-bc1ec5bd",
-    "prediction_id": "FG-20261127031638-bc1ec5bd",
-    "area_id": "ERD-001",
-    "area_name": "Erode City",
-    "risk_probability": 0.9684,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "ERD-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-19a1c1b2",
-    "prediction_id": "FG-20261127031638-19a1c1b2",
-    "area_id": "ERD-002",
-    "area_name": "Bhavani Town",
-    "risk_probability": 0.9775,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "TPR-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-a0e15e0d",
-    "prediction_id": "FG-20261127031638-a0e15e0d",
-    "area_id": "TPR-001",
-    "area_name": "Tiruppur Town",
-    "risk_probability": 0.9674,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "TPR-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-3ca0e969",
-    "prediction_id": "FG-20261127031638-3ca0e969",
-    "area_id": "TPR-002",
-    "area_name": "Dharapuram",
-    "risk_probability": 0.7999,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "VEL-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-5ac68a47",
-    "prediction_id": "FG-20261127031638-5ac68a47",
-    "area_id": "VEL-001",
-    "area_name": "Vellore Fort City",
-    "risk_probability": 0.9623,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "VEL-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-cfbdcd05",
-    "prediction_id": "FG-20261127031638-cfbdcd05",
-    "area_id": "VEL-002",
-    "area_name": "Katpadi",
-    "risk_probability": 0.8971,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "RPT-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-d7124704",
-    "prediction_id": "FG-20261127031638-d7124704",
-    "area_id": "RPT-001",
-    "area_name": "Ranipet Town",
-    "risk_probability": 0.9704,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "RPT-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-8c505cd1",
-    "prediction_id": "FG-20261127031638-8c505cd1",
-    "area_id": "RPT-002",
-    "area_name": "Arakkonam",
-    "risk_probability": 0.9693,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "VLP-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-9112f04c",
-    "prediction_id": "FG-20261127031638-9112f04c",
-    "area_id": "VLP-001",
-    "area_name": "Viluppuram City",
-    "risk_probability": 0.9111,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "VLP-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-29080581",
-    "prediction_id": "FG-20261127031638-29080581",
-    "area_id": "VLP-002",
-    "area_name": "Tindivanam",
-    "risk_probability": 0.884,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "DGL-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-ed9324cd",
-    "prediction_id": "FG-20261127031638-ed9324cd",
-    "area_id": "DGL-001",
-    "area_name": "Dindigul Town",
-    "risk_probability": 0.8827,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "DGL-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-488a26b8",
-    "prediction_id": "FG-20261127031638-488a26b8",
-    "area_id": "DGL-002",
-    "area_name": "Palani",
-    "risk_probability": 0.8828,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "THN-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-e0de8411",
-    "prediction_id": "FG-20261127031638-e0de8411",
-    "area_id": "THN-001",
-    "area_name": "Theni Allinagaram",
-    "risk_probability": 0.8936,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "THN-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-030bd395",
-    "prediction_id": "FG-20261127031638-030bd395",
-    "area_id": "THN-002",
-    "area_name": "Bodinayakanur",
-    "risk_probability": 0.8637,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "RMD-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031638-3cc0cee5",
-    "prediction_id": "FG-20261127031638-3cc0cee5",
-    "area_id": "RMD-001",
-    "area_name": "Ramanathapuram Town",
-    "risk_probability": 0.9877,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "RMD-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-ebe083c6",
-    "prediction_id": "FG-20261127031639-ebe083c6",
-    "area_id": "RMD-002",
-    "area_name": "Rameswaram Island",
-    "risk_probability": 0.9825,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "SVG-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-6588fd32",
-    "prediction_id": "FG-20261127031639-6588fd32",
-    "area_id": "SVG-001",
-    "area_name": "Sivaganga Town",
-    "risk_probability": 0.884,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "SVG-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-86796528",
-    "prediction_id": "FG-20261127031639-86796528",
-    "area_id": "SVG-002",
-    "area_name": "Karaikudi",
-    "risk_probability": 0.8999,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "VRD-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-e5bce48c",
-    "prediction_id": "FG-20261127031639-e5bce48c",
-    "area_id": "VRD-001",
-    "area_name": "Virudhunagar City",
-    "risk_probability": 0.9712,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "VRD-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-2c1b9ab1",
-    "prediction_id": "FG-20261127031639-2c1b9ab1",
-    "area_id": "VRD-002",
-    "area_name": "Sivakasi",
-    "risk_probability": 0.9695,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "TKS-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-b639c062",
-    "prediction_id": "FG-20261127031639-b639c062",
-    "area_id": "TKS-001",
-    "area_name": "Tenkasi Town",
-    "risk_probability": 0.8948,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "TKS-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-9c40dc1e",
-    "prediction_id": "FG-20261127031639-9c40dc1e",
-    "area_id": "TKS-002",
-    "area_name": "Courtallam",
-    "risk_probability": 0.5688,
-    "risk_band": "MODERATE",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KRR-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-48d09eb1",
-    "prediction_id": "FG-20261127031639-48d09eb1",
-    "area_id": "KRR-001",
-    "area_name": "Karur City",
-    "risk_probability": 0.9795,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KRR-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-413bd6d9",
-    "prediction_id": "FG-20261127031639-413bd6d9",
-    "area_id": "KRR-002",
-    "area_name": "Kulithalai",
-    "risk_probability": 0.9519,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "NKL-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-c6d045f0",
-    "prediction_id": "FG-20261127031639-c6d045f0",
-    "area_id": "NKL-001",
-    "area_name": "Namakkal Town",
-    "risk_probability": 0.868,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "NKL-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-31dbd653",
-    "prediction_id": "FG-20261127031639-31dbd653",
-    "area_id": "NKL-002",
-    "area_name": "Kumarapalayam",
-    "risk_probability": 0.9764,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "PDK-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-e62afa08",
-    "prediction_id": "FG-20261127031639-e62afa08",
-    "area_id": "PDK-001",
-    "area_name": "Pudukkottai Town",
-    "risk_probability": 0.8971,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "PDK-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-67510da5",
-    "prediction_id": "FG-20261127031639-67510da5",
-    "area_id": "PDK-002",
-    "area_name": "Aranthangi",
-    "risk_probability": 0.9134,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "TVM-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-407135c8",
-    "prediction_id": "FG-20261127031639-407135c8",
-    "area_id": "TVM-001",
-    "area_name": "Tiruvannamalai Town",
-    "risk_probability": 0.868,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "TVM-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-06d249b9",
-    "prediction_id": "FG-20261127031639-06d249b9",
-    "area_id": "TVM-002",
-    "area_name": "Cheyyar",
-    "risk_probability": 0.8968,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "DHP-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-5119c0e4",
-    "prediction_id": "FG-20261127031639-5119c0e4",
-    "area_id": "DHP-001",
-    "area_name": "Dharmapuri Town",
-    "risk_probability": 0.4286,
-    "risk_band": "MODERATE",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "DHP-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-ee68c994",
-    "prediction_id": "FG-20261127031639-ee68c994",
-    "area_id": "DHP-002",
-    "area_name": "Hogenakkal",
-    "risk_probability": 0.5591,
-    "risk_band": "MODERATE",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KRI-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-6ed49c96",
-    "prediction_id": "FG-20261127031639-6ed49c96",
-    "area_id": "KRI-001",
-    "area_name": "Krishnagiri Town",
-    "risk_probability": 0.8802,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KRI-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-54ea88b6",
-    "prediction_id": "FG-20261127031639-54ea88b6",
-    "area_id": "KRI-002",
-    "area_name": "Hosur City",
-    "risk_probability": 0.9666,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "KLK-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-62aae56b",
-    "prediction_id": "FG-20261127031639-62aae56b",
-    "area_id": "KLK-001",
-    "area_name": "Kallakurichi Town",
-    "risk_probability": 0.8971,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KLK-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-43af8ffa",
-    "prediction_id": "FG-20261127031639-43af8ffa",
-    "area_id": "KLK-002",
-    "area_name": "Ulundurpet",
-    "risk_probability": 0.8997,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "ARI-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-dc50bae6",
-    "prediction_id": "FG-20261127031639-dc50bae6",
-    "area_id": "ARI-001",
-    "area_name": "Ariyalur Town",
-    "risk_probability": 0.884,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "ARI-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-54955014",
-    "prediction_id": "FG-20261127031639-54955014",
-    "area_id": "ARI-002",
-    "area_name": "Jayankondam",
-    "risk_probability": 0.8997,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "PER-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-f3556059",
-    "prediction_id": "FG-20261127031639-f3556059",
-    "area_id": "PER-001",
-    "area_name": "Perambalur Town",
-    "risk_probability": 0.8682,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "TPT-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-962c9957",
-    "prediction_id": "FG-20261127031639-962c9957",
-    "area_id": "TPT-001",
-    "area_name": "Tirupathur Town",
-    "risk_probability": 0.8682,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "rain_1h_mm"
-    ]
-  },
-  {
-    "partition_key": "TPT-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-44411f67",
-    "prediction_id": "FG-20261127031639-44411f67",
-    "area_id": "TPT-002",
-    "area_name": "Vaniyambadi",
-    "risk_probability": 0.9658,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "AP-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-91c31f1d",
-    "prediction_id": "FG-20261127031639-91c31f1d",
-    "area_id": "AP-001",
-    "area_name": "Visakhapatnam (Gajuwaka Coastal Corridor)",
-    "risk_probability": 0.9926,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "AP-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-e89151a8",
-    "prediction_id": "FG-20261127031639-e89151a8",
-    "area_id": "AP-002",
-    "area_name": "Vijayawada (Budameru & Krishna Confluence)",
-    "risk_probability": 0.9941,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "AP-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-c2ee9078",
-    "prediction_id": "FG-20261127031639-c2ee9078",
-    "area_id": "AP-003",
-    "area_name": "Nellore (Pennar River Floodplain)",
-    "risk_probability": 0.9936,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "AP-004",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-71d310b5",
-    "prediction_id": "FG-20261127031639-71d310b5",
-    "area_id": "AP-004",
-    "area_name": "Tirupati (Swarnamukhi Basin Lowlands)",
-    "risk_probability": 0.9623,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "AS-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-a6b15053",
-    "prediction_id": "FG-20261127031639-a6b15053",
-    "area_id": "AS-001",
-    "area_name": "Guwahati (Bharalu & Anil Nagar Lowlands)",
-    "risk_probability": 0.9837,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "AS-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-2d2f8ed5",
-    "prediction_id": "FG-20261127031639-2d2f8ed5",
-    "area_id": "AS-002",
-    "area_name": "Dibrugarh (Town Protection Dyke & Mohanaghat)",
-    "risk_probability": 0.9748,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "AS-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-e522a43b",
-    "prediction_id": "FG-20261127031639-e522a43b",
-    "area_id": "AS-003",
-    "area_name": "Silchar (Barak Valley Riverfront)",
-    "risk_probability": 0.9825,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "AS-004",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-b1179975",
-    "prediction_id": "FG-20261127031639-b1179975",
-    "area_id": "AS-004",
-    "area_name": "Kaziranga (Brahmaputra Overflow Corridor)",
-    "risk_probability": 0.2001,
-    "risk_band": "LOW",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "BR-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-b0d28644",
-    "prediction_id": "FG-20261127031639-b0d28644",
-    "area_id": "BR-001",
-    "area_name": "Patna (Kankarbagh & Rajendra Nagar Confluence)",
-    "risk_probability": 0.9837,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "BR-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-7dadda03",
-    "prediction_id": "FG-20261127031639-7dadda03",
-    "area_id": "BR-002",
-    "area_name": "Muzaffarpur (Burhi Gandak Embankment)",
-    "risk_probability": 0.9841,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "BR-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-e707ae68",
-    "prediction_id": "FG-20261127031639-e707ae68",
-    "area_id": "BR-003",
-    "area_name": "Bhagalpur (Ganga Floodplain Urban Fringe)",
-    "risk_probability": 0.9841,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "DL-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-824b01da",
-    "prediction_id": "FG-20261127031639-824b01da",
-    "area_id": "DL-001",
-    "area_name": "Yamuna Bazar & Kashmere Gate Lowlands",
-    "risk_probability": 0.9837,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "DL-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-3161d694",
-    "prediction_id": "FG-20261127031639-3161d694",
-    "area_id": "DL-002",
-    "area_name": "Minto Bridge & Connaught Place Underpass",
-    "risk_probability": 0.9785,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "DL-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-f9fb5b25",
-    "prediction_id": "FG-20261127031639-f9fb5b25",
-    "area_id": "DL-003",
-    "area_name": "Mayur Vihar & ITO Ring Road Low Corridor",
-    "risk_probability": 0.9837,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "DL-004",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-2b98268d",
-    "prediction_id": "FG-20261127031639-2b98268d",
-    "area_id": "DL-004",
-    "area_name": "Gurugram (Cyber City & Subhash Chowk)",
-    "risk_probability": 0.9783,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "GJ-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-6dc7b4ed",
-    "prediction_id": "FG-20261127031639-6dc7b4ed",
-    "area_id": "GJ-001",
-    "area_name": "Ahmedabad (Sabarmati Riverfront Corridor)",
-    "risk_probability": 0.9837,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "GJ-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-8b9cc334",
-    "prediction_id": "FG-20261127031639-8b9cc334",
-    "area_id": "GJ-002",
-    "area_name": "Surat (Adajan & Rander Tapi Estuary)",
-    "risk_probability": 0.9944,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "GJ-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-595472cc",
-    "prediction_id": "FG-20261127031639-595472cc",
-    "area_id": "GJ-003",
-    "area_name": "Vadodara (Vishwamitri River Lowlands)",
-    "risk_probability": 0.9845,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KA-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-3d2d0cce",
-    "prediction_id": "FG-20261127031639-3d2d0cce",
-    "area_id": "KA-001",
-    "area_name": "Bengaluru (Bellandur & Rainbow Drive Valley)",
-    "risk_probability": 0.9837,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KA-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-430eefb3",
-    "prediction_id": "FG-20261127031639-430eefb3",
-    "area_id": "KA-002",
-    "area_name": "Bengaluru (Koramangala 4th Block Drain)",
-    "risk_probability": 0.9775,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KA-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-0051ed69",
-    "prediction_id": "FG-20261127031639-0051ed69",
-    "area_id": "KA-003",
-    "area_name": "Mangaluru (Pumpwell & Netravati Confluence)",
-    "risk_probability": 0.9915,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KA-004",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-dfbad876",
-    "prediction_id": "FG-20261127031639-dfbad876",
-    "area_id": "KA-004",
-    "area_name": "Kodagu (Bhagamandala Triveni Sangam)",
-    "risk_probability": 0.5313,
-    "risk_band": "MODERATE",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KL-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031639-dc9a33b6",
-    "prediction_id": "FG-20261127031639-dc9a33b6",
-    "area_id": "KL-001",
-    "area_name": "Kochi (Marine Drive & Edappally Lowlands)",
-    "risk_probability": 0.9926,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KL-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-1ada1960",
-    "prediction_id": "FG-20261127031640-1ada1960",
-    "area_id": "KL-002",
-    "area_name": "Aluva (Periyar Riverfront Spills)",
-    "risk_probability": 0.992,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KL-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-c155e2e1",
-    "prediction_id": "FG-20261127031640-c155e2e1",
-    "area_id": "KL-003",
-    "area_name": "Alappuzha (Kuttanad Sub-Sea-Level Delta)",
-    "risk_probability": 0.9914,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KL-004",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-42b2f9dd",
-    "prediction_id": "FG-20261127031640-42b2f9dd",
-    "area_id": "KL-004",
-    "area_name": "Wayanad (Meppadi & Chooralmala Valley)",
-    "risk_probability": 0.4639,
-    "risk_band": "MODERATE",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "KL-005",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-22f240a2",
-    "prediction_id": "FG-20261127031640-22f240a2",
-    "area_id": "KL-005",
-    "area_name": "Thiruvananthapuram (Thampanoor Canal Basin)",
-    "risk_probability": 0.9925,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "MH-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-1264063a",
-    "prediction_id": "FG-20261127031640-1264063a",
-    "area_id": "MH-001",
-    "area_name": "Mumbai (Kurla & Kranti Nagar Mithi Basin)",
-    "risk_probability": 0.994,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "MH-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-efb8f849",
-    "prediction_id": "FG-20261127031640-efb8f849",
-    "area_id": "MH-002",
-    "area_name": "Mumbai (Hindmata & Dadar Low-Lying Bowl)",
-    "risk_probability": 0.992,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "MH-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-74ebb223",
-    "prediction_id": "FG-20261127031640-74ebb223",
-    "area_id": "MH-003",
-    "area_name": "Mumbai (Milan Subway & Andheri West)",
-    "risk_probability": 0.9925,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "MH-004",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-34257e28",
-    "prediction_id": "FG-20261127031640-34257e28",
-    "area_id": "MH-004",
-    "area_name": "Pune (Sinhagad Road & Mutha River Bank)",
-    "risk_probability": 0.9833,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "MH-005",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-9a3917cc",
-    "prediction_id": "FG-20261127031640-9a3917cc",
-    "area_id": "MH-005",
-    "area_name": "Kolhapur (Panchganga Ghat & Rajaram Weir)",
-    "risk_probability": 0.9784,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "OD-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-447cfbbe",
-    "prediction_id": "FG-20261127031640-447cfbbe",
-    "area_id": "OD-001",
-    "area_name": "Bhubaneswar (Jayadev Vihar & Gangua Nala)",
-    "risk_probability": 0.9759,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "OD-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-315f5be0",
-    "prediction_id": "FG-20261127031640-315f5be0",
-    "area_id": "OD-002",
-    "area_name": "Cuttack (Mahanadi & Kathajodi Ring Road)",
-    "risk_probability": 0.9839,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "OD-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-dad23dd6",
-    "prediction_id": "FG-20261127031640-dad23dd6",
-    "area_id": "OD-003",
-    "area_name": "Puri (Coastal Surge & Banki Muhana)",
-    "risk_probability": 0.9888,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "PB-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-0df5bdc1",
-    "prediction_id": "FG-20261127031640-0df5bdc1",
-    "area_id": "PB-001",
-    "area_name": "Ludhiana (Budha Nullah Floodplain)",
-    "risk_probability": 0.9839,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "HR-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-754a3861",
-    "prediction_id": "FG-20261127031640-754a3861",
-    "area_id": "HR-001",
-    "area_name": "Ambala (Ghaggar River Embankment Zone)",
-    "risk_probability": 0.9833,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
     "partition_key": "RJ-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-3bce5392",
-    "prediction_id": "FG-20261127031640-3bce5392",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045057-32662b9c",
+    "prediction_id": "FG-20261127045057-32662b9c",
     "area_id": "RJ-001",
     "area_name": "Jaipur (Dravyavati River Basin & Sanganer)",
-    "risk_probability": 0.9837,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
-    "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
-      "rain_3d_mm",
-      "flow_accumulation"
-    ]
-  },
-  {
-    "partition_key": "RJ-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-6363bdf5",
-    "prediction_id": "FG-20261127031640-6363bdf5",
-    "area_id": "RJ-002",
-    "area_name": "Kota (Chambal River Barrage Spillway)",
-    "risk_probability": 0.9774,
-    "risk_band": "HIGH",
-    "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1495,15 +19,69 @@
   },
   {
     "partition_key": "TG-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-4f885c44",
-    "prediction_id": "FG-20261127031640-4f885c44",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045057-c3cdf95f",
+    "prediction_id": "FG-20261127045057-c3cdf95f",
     "area_id": "TG-001",
     "area_name": "Hyderabad (Begumpet & Rasoolpura Outfall)",
-    "risk_probability": 0.9774,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "KL-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045057-dea4cd15",
+    "prediction_id": "FG-20261127045057-dea4cd15",
+    "area_id": "KL-002",
+    "area_name": "Aluva (Periyar Riverfront Spills)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "KL-004",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045057-24d81de7",
+    "prediction_id": "FG-20261127045057-24d81de7",
+    "area_id": "KL-004",
+    "area_name": "Wayanad (Meppadi & Chooralmala Valley)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "RJ-002",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045057-8a330661",
+    "prediction_id": "FG-20261127045057-8a330661",
+    "area_id": "RJ-002",
+    "area_name": "Kota (Chambal River Barrage Spillway)",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1513,33 +91,123 @@
   },
   {
     "partition_key": "TG-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-ac27c4d3",
-    "prediction_id": "FG-20261127031640-ac27c4d3",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045057-43fcd9d6",
+    "prediction_id": "FG-20261127045057-43fcd9d6",
     "area_id": "TG-002",
     "area_name": "Hyderabad (Tolichowki & Nadeem Colony Basin)",
-    "risk_probability": 0.9837,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0007,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
       "rain_3d_mm",
       "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "KL-003",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045057-9a86ff45",
+    "prediction_id": "FG-20261127045057-9a86ff45",
+    "area_id": "KL-003",
+    "area_name": "Alappuzha (Kuttanad Sub-Sea-Level Delta)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "distance_to_water_m"
+    ]
+  },
+  {
+    "partition_key": "KL-005",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045057-6267eb5c",
+    "prediction_id": "FG-20261127045057-6267eb5c",
+    "area_id": "KL-005",
+    "area_name": "Thiruvananthapuram (Thampanoor Canal Basin)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "distance_to_water_m"
+    ]
+  },
+  {
+    "partition_key": "TG-001",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045057-0aaa797e",
+    "prediction_id": "FG-20261127045057-0aaa797e",
+    "area_id": "TG-001",
+    "area_name": "Hyderabad (Begumpet & Rasoolpura Outfall)",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "KL-004",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045057-afc79c4b",
+    "prediction_id": "FG-20261127045057-afc79c4b",
+    "area_id": "KL-004",
+    "area_name": "Wayanad (Meppadi & Chooralmala Valley)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "MH-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045057-5e6efd58",
+    "prediction_id": "FG-20261127045057-5e6efd58",
+    "area_id": "MH-001",
+    "area_name": "Mumbai (Kurla & Kranti Nagar Mithi Basin)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "distance_to_water_m"
     ]
   },
   {
     "partition_key": "TG-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-a5f2bd48",
-    "prediction_id": "FG-20261127031640-a5f2bd48",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045057-e7d76c0e",
+    "prediction_id": "FG-20261127045057-e7d76c0e",
     "area_id": "TG-003",
     "area_name": "Hyderabad (Malakpet & Chaderghat Causeway)",
-    "risk_probability": 0.9837,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0007,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1548,16 +216,88 @@
     ]
   },
   {
+    "partition_key": "TG-002",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045057-ca044adb",
+    "prediction_id": "FG-20261127045057-ca044adb",
+    "area_id": "TG-002",
+    "area_name": "Hyderabad (Tolichowki & Nadeem Colony Basin)",
+    "risk_probability": 0.0007,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "KL-005",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045057-06ec22e3",
+    "prediction_id": "FG-20261127045057-06ec22e3",
+    "area_id": "KL-005",
+    "area_name": "Thiruvananthapuram (Thampanoor Canal Basin)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "distance_to_water_m"
+    ]
+  },
+  {
     "partition_key": "UP-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-d04cb27f",
-    "prediction_id": "FG-20261127031640-d04cb27f",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045057-ea9aece8",
+    "prediction_id": "FG-20261127045057-ea9aece8",
     "area_id": "UP-001",
     "area_name": "Lucknow (Gomti Barrage & Daliganj Lowlands)",
-    "risk_probability": 0.983,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0008,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "MH-002",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045057-13f74994",
+    "prediction_id": "FG-20261127045057-13f74994",
+    "area_id": "MH-002",
+    "area_name": "Mumbai (Hindmata & Dadar Low-Lying Bowl)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "TG-003",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045057-fb72adaf",
+    "prediction_id": "FG-20261127045057-fb72adaf",
+    "area_id": "TG-003",
+    "area_name": "Hyderabad (Malakpet & Chaderghat Causeway)",
+    "risk_probability": 0.0007,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1567,15 +307,69 @@
   },
   {
     "partition_key": "UP-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-56110659",
-    "prediction_id": "FG-20261127031640-56110659",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045057-40e78935",
+    "prediction_id": "FG-20261127045057-40e78935",
     "area_id": "UP-002",
     "area_name": "Varanasi (Assi Ghat & Varuna Confluence)",
-    "risk_probability": 0.9845,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "MH-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045057-558daf30",
+    "prediction_id": "FG-20261127045057-558daf30",
+    "area_id": "MH-001",
+    "area_name": "Mumbai (Kurla & Kranti Nagar Mithi Basin)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "distance_to_water_m"
+    ]
+  },
+  {
+    "partition_key": "MH-003",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045057-b2ccf36c",
+    "prediction_id": "FG-20261127045057-b2ccf36c",
+    "area_id": "MH-003",
+    "area_name": "Mumbai (Milan Subway & Andheri West)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UP-001",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045057-443818e4",
+    "prediction_id": "FG-20261127045057-443818e4",
+    "area_id": "UP-001",
+    "area_name": "Lucknow (Gomti Barrage & Daliganj Lowlands)",
+    "risk_probability": 0.0008,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1585,15 +379,177 @@
   },
   {
     "partition_key": "UP-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-c5d22416",
-    "prediction_id": "FG-20261127031640-c5d22416",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045057-697483ae",
+    "prediction_id": "FG-20261127045057-697483ae",
     "area_id": "UP-003",
     "area_name": "Prayagraj (Sangam Low-Lying Ghats)",
-    "risk_probability": 0.9833,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "MH-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045057-27ea5670",
+    "prediction_id": "FG-20261127045057-27ea5670",
+    "area_id": "MH-002",
+    "area_name": "Mumbai (Hindmata & Dadar Low-Lying Bowl)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "MH-004",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045057-dbee9b54",
+    "prediction_id": "FG-20261127045057-dbee9b54",
+    "area_id": "MH-004",
+    "area_name": "Pune (Sinhagad Road & Mutha River Bank)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UP-002",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045057-31989dcb",
+    "prediction_id": "FG-20261127045057-31989dcb",
+    "area_id": "UP-002",
+    "area_name": "Varanasi (Assi Ghat & Varuna Confluence)",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "MH-003",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045058-95b3bda8",
+    "prediction_id": "FG-20261127045058-95b3bda8",
+    "area_id": "MH-003",
+    "area_name": "Mumbai (Milan Subway & Andheri West)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UK-001",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045058-126de5ae",
+    "prediction_id": "FG-20261127045058-126de5ae",
+    "area_id": "UK-001",
+    "area_name": "Dehradun (Rispana & Bindal River Torrent Beds)",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "MH-005",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045058-25ff9184",
+    "prediction_id": "FG-20261127045058-25ff9184",
+    "area_id": "MH-005",
+    "area_name": "Kolhapur (Panchganga Ghat & Rajaram Weir)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UP-003",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045058-747f6f31",
+    "prediction_id": "FG-20261127045058-747f6f31",
+    "area_id": "UP-003",
+    "area_name": "Prayagraj (Sangam Low-Lying Ghats)",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "MH-004",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045058-7fbc8185",
+    "prediction_id": "FG-20261127045058-7fbc8185",
+    "area_id": "MH-004",
+    "area_name": "Pune (Sinhagad Road & Mutha River Bank)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "HP-001",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045058-67b9153e",
+    "prediction_id": "FG-20261127045058-67b9153e",
+    "area_id": "HP-001",
+    "area_name": "Kullu-Manali (Beas River Main Flood Channel)",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1603,15 +559,15 @@
   },
   {
     "partition_key": "UK-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-a5a9d925",
-    "prediction_id": "FG-20261127031640-a5a9d925",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045058-2093dd99",
+    "prediction_id": "FG-20261127045058-2093dd99",
     "area_id": "UK-001",
     "area_name": "Dehradun (Rispana & Bindal River Torrent Beds)",
-    "risk_probability": 0.9694,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1620,34 +576,196 @@
     ]
   },
   {
-    "partition_key": "HP-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-d4ebe1bc",
-    "prediction_id": "FG-20261127031640-d4ebe1bc",
-    "area_id": "HP-001",
-    "area_name": "Kullu-Manali (Beas River Main Flood Channel)",
-    "risk_probability": 0.5918,
-    "risk_band": "MODERATE",
+    "partition_key": "OD-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045058-39c99eac",
+    "prediction_id": "FG-20261127045058-39c99eac",
+    "area_id": "OD-001",
+    "area_name": "Bhubaneswar (Jayadev Vihar & Gangua Nala)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
     "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
       "rain_3d_mm",
-      "flow_accumulation"
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
     ]
   },
   {
     "partition_key": "UK-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-2f740add",
-    "prediction_id": "FG-20261127031640-2f740add",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045058-a6124947",
+    "prediction_id": "FG-20261127045058-a6124947",
     "area_id": "UK-002",
     "area_name": "Haridwar & Rishikesh (Ganga Spillway Lowlands)",
-    "risk_probability": 0.9735,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "MH-005",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045058-762a3393",
+    "prediction_id": "FG-20261127045058-762a3393",
+    "area_id": "MH-005",
+    "area_name": "Kolhapur (Panchganga Ghat & Rajaram Weir)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "HP-001",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045058-13fae764",
+    "prediction_id": "FG-20261127045058-13fae764",
+    "area_id": "HP-001",
+    "area_name": "Kullu-Manali (Beas River Main Flood Channel)",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "OD-002",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045058-d0f5d1a3",
+    "prediction_id": "FG-20261127045058-d0f5d1a3",
+    "area_id": "OD-002",
+    "area_name": "Cuttack (Mahanadi & Kathajodi Ring Road)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "WB-001",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045058-4ed1b3f3",
+    "prediction_id": "FG-20261127045058-4ed1b3f3",
+    "area_id": "WB-001",
+    "area_name": "Kolkata (Thanthania & Central Avenue Bowl)",
+    "risk_probability": 0.0007,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "OD-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045058-ee75fcad",
+    "prediction_id": "FG-20261127045058-ee75fcad",
+    "area_id": "OD-001",
+    "area_name": "Bhubaneswar (Jayadev Vihar & Gangua Nala)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UK-002",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045058-faa013df",
+    "prediction_id": "FG-20261127045058-faa013df",
+    "area_id": "UK-002",
+    "area_name": "Haridwar & Rishikesh (Ganga Spillway Lowlands)",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "OD-003",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045058-a1dbb9fb",
+    "prediction_id": "FG-20261127045058-a1dbb9fb",
+    "area_id": "OD-003",
+    "area_name": "Puri (Coastal Surge & Banki Muhana)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "distance_to_water_m"
+    ]
+  },
+  {
+    "partition_key": "OD-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045058-6b39467b",
+    "prediction_id": "FG-20261127045058-6b39467b",
+    "area_id": "OD-002",
+    "area_name": "Cuttack (Mahanadi & Kathajodi Ring Road)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "WB-002",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045058-c7152652",
+    "prediction_id": "FG-20261127045058-c7152652",
+    "area_id": "WB-002",
+    "area_name": "Kolkata (Behala & Taratala Lowlands)",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1657,15 +775,51 @@
   },
   {
     "partition_key": "WB-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-e35aa958",
-    "prediction_id": "FG-20261127031640-e35aa958",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045058-f8d43cad",
+    "prediction_id": "FG-20261127045058-f8d43cad",
     "area_id": "WB-001",
     "area_name": "Kolkata (Thanthania & Central Avenue Bowl)",
-    "risk_probability": 0.992,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0007,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "PB-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045058-56712601",
+    "prediction_id": "FG-20261127045058-56712601",
+    "area_id": "PB-001",
+    "area_name": "Ludhiana (Budha Nullah Floodplain)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "WB-003",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045058-b3a726fe",
+    "prediction_id": "FG-20261127045058-b3a726fe",
+    "area_id": "WB-003",
+    "area_name": "Darjeeling-Kalimpong (Teesta Bazar Low Gorge)",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1675,15 +829,15 @@
   },
   {
     "partition_key": "WB-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-0e27ba56",
-    "prediction_id": "FG-20261127031640-0e27ba56",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045058-d709237b",
+    "prediction_id": "FG-20261127045058-d709237b",
     "area_id": "WB-002",
     "area_name": "Kolkata (Behala & Taratala Lowlands)",
-    "risk_probability": 0.9939,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1692,16 +846,106 @@
     ]
   },
   {
+    "partition_key": "OD-003",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045058-d51d8272",
+    "prediction_id": "FG-20261127045058-d51d8272",
+    "area_id": "OD-003",
+    "area_name": "Puri (Coastal Surge & Banki Muhana)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "distance_to_water_m"
+    ]
+  },
+  {
+    "partition_key": "HR-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045058-8eff091f",
+    "prediction_id": "FG-20261127045058-8eff091f",
+    "area_id": "HR-001",
+    "area_name": "Ambala (Ghaggar River Embankment Zone)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
     "partition_key": "WB-003",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-f87939e6",
-    "prediction_id": "FG-20261127031640-f87939e6",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045058-a0e8bb9d",
+    "prediction_id": "FG-20261127045058-a0e8bb9d",
     "area_id": "WB-003",
     "area_name": "Darjeeling-Kalimpong (Teesta Bazar Low Gorge)",
-    "risk_probability": 0.5591,
-    "risk_band": "MODERATE",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "RJ-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045058-df68f411",
+    "prediction_id": "FG-20261127045058-df68f411",
+    "area_id": "RJ-001",
+    "area_name": "Jaipur (Dravyavati River Basin & Sanganer)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "PB-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045058-8345f12c",
+    "prediction_id": "FG-20261127045058-8345f12c",
+    "area_id": "PB-001",
+    "area_name": "Ludhiana (Budha Nullah Floodplain)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "JK-001",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045058-55d05771",
+    "prediction_id": "FG-20261127045058-55d05771",
+    "area_id": "JK-001",
+    "area_name": "Srinagar (Rajbagh & Lal Chowk Jhelum Bund)",
+    "risk_probability": 0.0007,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1711,15 +955,105 @@
   },
   {
     "partition_key": "JK-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-aabec6f4",
-    "prediction_id": "FG-20261127031640-aabec6f4",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045058-d51c0206",
+    "prediction_id": "FG-20261127045058-d51c0206",
     "area_id": "JK-001",
     "area_name": "Srinagar (Rajbagh & Lal Chowk Jhelum Bund)",
-    "risk_probability": 0.9845,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0007,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "RJ-002",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045058-95b76b37",
+    "prediction_id": "FG-20261127045058-95b76b37",
+    "area_id": "RJ-002",
+    "area_name": "Kota (Chambal River Barrage Spillway)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "JK-002",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045058-9fd36cab",
+    "prediction_id": "FG-20261127045058-9fd36cab",
+    "area_id": "JK-002",
+    "area_name": "Jammu (Tawi River Island & Gujjar Nagar)",
+    "risk_probability": 0.0005,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "HR-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045058-b99d69f6",
+    "prediction_id": "FG-20261127045058-b99d69f6",
+    "area_id": "HR-001",
+    "area_name": "Ambala (Ghaggar River Embankment Zone)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "TG-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045058-7f8524ca",
+    "prediction_id": "FG-20261127045058-7f8524ca",
+    "area_id": "TG-001",
+    "area_name": "Hyderabad (Begumpet & Rasoolpura Outfall)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "GA-001",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045058-df794676",
+    "prediction_id": "FG-20261127045058-df794676",
+    "area_id": "GA-001",
+    "area_name": "Panaji (Miramar & Mandovi Riverfront Lowlands)",
+    "risk_probability": 0.0008,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1729,15 +1063,15 @@
   },
   {
     "partition_key": "JK-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-05cf00c7",
-    "prediction_id": "FG-20261127031640-05cf00c7",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045058-40437ca4",
+    "prediction_id": "FG-20261127045058-40437ca4",
     "area_id": "JK-002",
     "area_name": "Jammu (Tawi River Island & Gujjar Nagar)",
-    "risk_probability": 0.9764,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0005,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1746,34 +1080,34 @@
     ]
   },
   {
-    "partition_key": "GA-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-b7df8375",
-    "prediction_id": "FG-20261127031640-b7df8375",
-    "area_id": "GA-001",
-    "area_name": "Panaji (Miramar & Mandovi Riverfront Lowlands)",
-    "risk_probability": 0.9879,
-    "risk_band": "HIGH",
+    "partition_key": "RJ-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045058-125646b2",
+    "prediction_id": "FG-20261127045058-125646b2",
+    "area_id": "RJ-001",
+    "area_name": "Jaipur (Dravyavati River Basin & Sanganer)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
     "top_factors": [
-      "rain_24h_mm",
-      "runoff_index",
       "rain_3d_mm",
-      "flow_accumulation"
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
     ]
   },
   {
     "partition_key": "MP-001",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-6b91c519",
-    "prediction_id": "FG-20261127031640-6b91c519",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045059-7d8bd96b",
+    "prediction_id": "FG-20261127045059-7d8bd96b",
     "area_id": "MP-001",
     "area_name": "Bhopal (Upper Lake Basin & VIP Road Spillway)",
-    "risk_probability": 0.9765,
-    "risk_band": "HIGH",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
@@ -1782,21 +1116,687 @@
     ]
   },
   {
-    "partition_key": "MP-002",
-    "sort_key": "2026-11-27T03:16:37.229952+00:00#FG-20261127031640-5e577c89",
-    "prediction_id": "FG-20261127031640-5e577c89",
-    "area_id": "MP-002",
-    "area_name": "Hoshangabad (Sethani Ghat Narmada Floodplain)",
-    "risk_probability": 0.9751,
-    "risk_band": "HIGH",
+    "partition_key": "TG-002",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-b6e27d9f",
+    "prediction_id": "FG-20261127045059-b6e27d9f",
+    "area_id": "TG-002",
+    "area_name": "Hyderabad (Tolichowki & Nadeem Colony Basin)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
     "model_version": "floodguard-0.1.0",
-    "timestamp": "2026-11-27T03:16:37.229952+00:00",
-    "rain_24h_mm": 90.0,
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "GA-001",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045059-a8bae6a1",
+    "prediction_id": "FG-20261127045059-a8bae6a1",
+    "area_id": "GA-001",
+    "area_name": "Panaji (Miramar & Mandovi Riverfront Lowlands)",
+    "risk_probability": 0.0008,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
     "top_factors": [
       "rain_24h_mm",
       "runoff_index",
       "rain_3d_mm",
       "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "RJ-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-f15459cd",
+    "prediction_id": "FG-20261127045059-f15459cd",
+    "area_id": "RJ-002",
+    "area_name": "Kota (Chambal River Barrage Spillway)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "MP-002",
+    "sort_key": "2026-11-27T04:50:33.339984+00:00#FG-20261127045059-715e0ecd",
+    "prediction_id": "FG-20261127045059-715e0ecd",
+    "area_id": "MP-002",
+    "area_name": "Hoshangabad (Sethani Ghat Narmada Floodplain)",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.339984+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "TG-003",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-6e073feb",
+    "prediction_id": "FG-20261127045059-6e073feb",
+    "area_id": "TG-003",
+    "area_name": "Hyderabad (Malakpet & Chaderghat Causeway)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "TG-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-5a8fad3f",
+    "prediction_id": "FG-20261127045059-5a8fad3f",
+    "area_id": "TG-001",
+    "area_name": "Hyderabad (Begumpet & Rasoolpura Outfall)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "MP-001",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045059-2dc32f7b",
+    "prediction_id": "FG-20261127045059-2dc32f7b",
+    "area_id": "MP-001",
+    "area_name": "Bhopal (Upper Lake Basin & VIP Road Spillway)",
+    "risk_probability": 0.0006,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "TG-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-dde9d74c",
+    "prediction_id": "FG-20261127045059-dde9d74c",
+    "area_id": "TG-002",
+    "area_name": "Hyderabad (Tolichowki & Nadeem Colony Basin)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UP-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-bfb946b8",
+    "prediction_id": "FG-20261127045059-bfb946b8",
+    "area_id": "UP-001",
+    "area_name": "Lucknow (Gomti Barrage & Daliganj Lowlands)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "MP-002",
+    "sort_key": "2026-11-27T04:50:33.350982+00:00#FG-20261127045059-ec1e56d2",
+    "prediction_id": "FG-20261127045059-ec1e56d2",
+    "area_id": "MP-002",
+    "area_name": "Hoshangabad (Sethani Ghat Narmada Floodplain)",
+    "risk_probability": 0.0002,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:33.350982+00:00",
+    "rain_24h_mm": 25.0,
+    "top_factors": [
+      "rain_24h_mm",
+      "runoff_index",
+      "rain_3d_mm",
+      "flow_accumulation"
+    ]
+  },
+  {
+    "partition_key": "TG-003",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-5a0e29e2",
+    "prediction_id": "FG-20261127045059-5a0e29e2",
+    "area_id": "TG-003",
+    "area_name": "Hyderabad (Malakpet & Chaderghat Causeway)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UP-002",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-9d8ab5ed",
+    "prediction_id": "FG-20261127045059-9d8ab5ed",
+    "area_id": "UP-002",
+    "area_name": "Varanasi (Assi Ghat & Varuna Confluence)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UP-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-c3c4e5e0",
+    "prediction_id": "FG-20261127045059-c3c4e5e0",
+    "area_id": "UP-001",
+    "area_name": "Lucknow (Gomti Barrage & Daliganj Lowlands)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UP-003",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-0be96dd1",
+    "prediction_id": "FG-20261127045059-0be96dd1",
+    "area_id": "UP-003",
+    "area_name": "Prayagraj (Sangam Low-Lying Ghats)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UP-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-9929cd43",
+    "prediction_id": "FG-20261127045059-9929cd43",
+    "area_id": "UP-002",
+    "area_name": "Varanasi (Assi Ghat & Varuna Confluence)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UK-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-6a2938c1",
+    "prediction_id": "FG-20261127045059-6a2938c1",
+    "area_id": "UK-001",
+    "area_name": "Dehradun (Rispana & Bindal River Torrent Beds)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UP-003",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-94315323",
+    "prediction_id": "FG-20261127045059-94315323",
+    "area_id": "UP-003",
+    "area_name": "Prayagraj (Sangam Low-Lying Ghats)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "HP-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-c95ee5a2",
+    "prediction_id": "FG-20261127045059-c95ee5a2",
+    "area_id": "HP-001",
+    "area_name": "Kullu-Manali (Beas River Main Flood Channel)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UK-002",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-1868ff08",
+    "prediction_id": "FG-20261127045059-1868ff08",
+    "area_id": "UK-002",
+    "area_name": "Haridwar & Rishikesh (Ganga Spillway Lowlands)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UK-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-dc5077f6",
+    "prediction_id": "FG-20261127045059-dc5077f6",
+    "area_id": "UK-001",
+    "area_name": "Dehradun (Rispana & Bindal River Torrent Beds)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "WB-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-8ba54ce3",
+    "prediction_id": "FG-20261127045059-8ba54ce3",
+    "area_id": "WB-001",
+    "area_name": "Kolkata (Thanthania & Central Avenue Bowl)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "HP-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-38e25d2e",
+    "prediction_id": "FG-20261127045059-38e25d2e",
+    "area_id": "HP-001",
+    "area_name": "Kullu-Manali (Beas River Main Flood Channel)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "WB-002",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-19a9f8bb",
+    "prediction_id": "FG-20261127045059-19a9f8bb",
+    "area_id": "WB-002",
+    "area_name": "Kolkata (Behala & Taratala Lowlands)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "UK-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-802e8061",
+    "prediction_id": "FG-20261127045059-802e8061",
+    "area_id": "UK-002",
+    "area_name": "Haridwar & Rishikesh (Ganga Spillway Lowlands)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "WB-003",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-a75ac504",
+    "prediction_id": "FG-20261127045059-a75ac504",
+    "area_id": "WB-003",
+    "area_name": "Darjeeling-Kalimpong (Teesta Bazar Low Gorge)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "WB-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-081e3f30",
+    "prediction_id": "FG-20261127045059-081e3f30",
+    "area_id": "WB-001",
+    "area_name": "Kolkata (Thanthania & Central Avenue Bowl)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "JK-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-24de80f9",
+    "prediction_id": "FG-20261127045059-24de80f9",
+    "area_id": "JK-001",
+    "area_name": "Srinagar (Rajbagh & Lal Chowk Jhelum Bund)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "WB-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-501639bb",
+    "prediction_id": "FG-20261127045059-501639bb",
+    "area_id": "WB-002",
+    "area_name": "Kolkata (Behala & Taratala Lowlands)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "WB-003",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045059-76ea5e64",
+    "prediction_id": "FG-20261127045059-76ea5e64",
+    "area_id": "WB-003",
+    "area_name": "Darjeeling-Kalimpong (Teesta Bazar Low Gorge)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "JK-002",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-aa73baa4",
+    "prediction_id": "FG-20261127045059-aa73baa4",
+    "area_id": "JK-002",
+    "area_name": "Jammu (Tawi River Island & Gujjar Nagar)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "GA-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045059-fd50d04b",
+    "prediction_id": "FG-20261127045059-fd50d04b",
+    "area_id": "GA-001",
+    "area_name": "Panaji (Miramar & Mandovi Riverfront Lowlands)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "distance_to_water_m"
+    ]
+  },
+  {
+    "partition_key": "JK-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045100-470355d6",
+    "prediction_id": "FG-20261127045100-470355d6",
+    "area_id": "JK-001",
+    "area_name": "Srinagar (Rajbagh & Lal Chowk Jhelum Bund)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "JK-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045100-361e17c5",
+    "prediction_id": "FG-20261127045100-361e17c5",
+    "area_id": "JK-002",
+    "area_name": "Jammu (Tawi River Island & Gujjar Nagar)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "MP-001",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045100-10c238d5",
+    "prediction_id": "FG-20261127045100-10c238d5",
+    "area_id": "MP-001",
+    "area_name": "Bhopal (Upper Lake Basin & VIP Road Spillway)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "GA-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045100-b059bd97",
+    "prediction_id": "FG-20261127045100-b059bd97",
+    "area_id": "GA-001",
+    "area_name": "Panaji (Miramar & Mandovi Riverfront Lowlands)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "elevation_m",
+      "distance_to_water_m"
+    ]
+  },
+  {
+    "partition_key": "MP-002",
+    "sort_key": "2026-11-27T04:50:35.207859+00:00#FG-20261127045100-d709a0ce",
+    "prediction_id": "FG-20261127045100-d709a0ce",
+    "area_id": "MP-002",
+    "area_name": "Hoshangabad (Sethani Ghat Narmada Floodplain)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.207859+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "MP-001",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045100-ec351906",
+    "prediction_id": "FG-20261127045100-ec351906",
+    "area_id": "MP-001",
+    "area_name": "Bhopal (Upper Lake Basin & VIP Road Spillway)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
+    ]
+  },
+  {
+    "partition_key": "MP-002",
+    "sort_key": "2026-11-27T04:50:35.198731+00:00#FG-20261127045100-a246da47",
+    "prediction_id": "FG-20261127045100-a246da47",
+    "area_id": "MP-002",
+    "area_name": "Hoshangabad (Sethani Ghat Narmada Floodplain)",
+    "risk_probability": 0.0001,
+    "risk_band": "LOW",
+    "model_version": "floodguard-0.1.0",
+    "timestamp": "2026-11-27T04:50:35.198731+00:00",
+    "rain_24h_mm": 0.0,
+    "top_factors": [
+      "rain_3d_mm",
+      "flow_accumulation",
+      "distance_to_water_m",
+      "rain_1h_mm"
     ]
   }
 ]

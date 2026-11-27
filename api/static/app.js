@@ -4135,17 +4135,20 @@ class FloodGuardApp {
       });
     }
 
-    // Preset buttons
-    document.querySelectorAll(".preset-pill").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".preset-pill").forEach(b => b.classList.remove("active"));
+    // Preset buttons (supports .preset-chip and .preset-pill)
+    const presetButtons = document.querySelectorAll(".preset-chip, .preset-pill");
+    presetButtons.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        presetButtons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         const preset = btn.dataset.preset;
+        console.log("[Preset Clicked]", preset);
         if (preset === "cyclone_michaung") {
           this.setPrecipitation(280.0, 65.0, 390.0, 25.5, 94);
-        } else if (preset === "northeast_monsoon") {
+        } else if (preset === "northeast_monsoon" || preset === "heavy_monsoon") {
           this.setPrecipitation(95.0, 28.0, 140.0, 26.0, 88);
-        } else if (preset === "localized_cloudburst") {
+        } else if (preset === "localized_cloudburst" || preset === "isolated_shower") {
           this.setPrecipitation(25.0, 12.0, 35.0, 28.0, 75);
         } else if (preset === "dry_baseline") {
           this.setPrecipitation(0, 0, 0, 31.0, 65);
@@ -4286,6 +4289,6 @@ class FloodGuardApp {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  window.floodApp = new FloodGuardApp();
+  window.floodApp = new FloodGuardApp(); window.app = window.floodApp;
   window.floodApp.init();
 });
